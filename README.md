@@ -47,16 +47,15 @@ Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **
 
 Esse projeto foi feito utilizando as seguintes tecnologias:
 
-**1 Tecnologia**
-- **[React.js](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)**
-
-- **[React-helmet](https://www.npmjs.com/package/react-helmet)**
-
-- **[Chakra-ui](https://chakra-ui.com/)**
-
-- **[Styled Components](https://styled-components.com/)**
-  
-- **[TypeScript](https://www.typescriptlang.org/)**
+> - **[React.js](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)**
+>
+> - **[React-helmet](https://www.npmjs.com/package/react-helmet)**
+>
+> - **[Chakra-ui](https://chakra-ui.com/)**
+>
+> - **[Styled Components](https://styled-components.com/)**
+>  
+> - **[TypeScript](https://www.typescriptlang.org/)**
 
 <br/>
 
