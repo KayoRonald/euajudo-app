@@ -15,7 +15,8 @@ export default function FooterContainer() {
       <Footer.Row>
         <Footer.Column>
           <Footer.Texto>
-            <Link to="/" target="_blank">Ajuda/FAQ</Link>
+            <Link to="/" 
+            target="_blank">Ajuda/FAQ</Link>
           </Footer.Texto>
           <Footer.Texto>Entre em contato</Footer.Texto>
           <Footer.Texto>Informações corporativas</Footer.Texto>

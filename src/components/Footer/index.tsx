@@ -4,9 +4,9 @@ import {
   Container, Row, Column, Texto, Title, Text, Break
 } from './footer'
 
-export interface LayoutProps  { 
-  children: string 
-  resPropos: string
+type LayoutProps = { 
+  children?: JSX.Element | JSX.Element[], 
+  resPropos?: JSX.Element
 }
 
 export default function Footer({children, ...resPropos}: LayoutProps){
