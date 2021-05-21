@@ -31,7 +31,8 @@ body::-webkit-scrollbar-thumb:hover {
   background: grey;
 }
 #id1,
-#id3 {
+#id2 {
   margin: 0 auto;
+  width: 394px!important
 }
 `
