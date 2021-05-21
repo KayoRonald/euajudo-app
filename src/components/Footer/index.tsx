@@ -5,8 +5,8 @@ import {
 } from './footer'
 
 type LayoutProps = { 
-  children?: JSX.Element | JSX.Element[], 
-  resPropos?: JSX.Element
+  children?: React.ReactNode; 
+  resPropos?: React.ReactNode;
 }
 
 export default function Footer({children, ...resPropos}: LayoutProps){
