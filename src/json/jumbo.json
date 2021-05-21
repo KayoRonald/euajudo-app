@@ -14,13 +14,5 @@
     "image": "https://hydra.bot/_nuxt/img/6540ccd.svg",
     "alt": "Watch on mobile",
     "direction": "row-reverse"
-  },
-  {
-    "id": 3,
-    "title": "Assista em todos os lugares.",
-    "subTitle": "Assista onde e quando quiser aos animes e encha de cor seu coração! Onde cada anime ganha vida em seus corações TOTALMENTE GRÁTIS",
-    "image": "https://i.ibb.co/FBsB6TD/ZeroTwo.webp",
-    "alt": "Zero Two",
-    "direction": "row"
   }
 ]

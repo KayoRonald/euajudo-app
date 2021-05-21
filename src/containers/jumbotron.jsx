@@ -14,7 +14,7 @@ import jumboData from '../json/jumbo.json';
 // : React.FC<PropsJumbo> = (props): JSX.Element
 const Container = () => {
   return (
-    <Jumbotron.Container>
+     <Jumbotron.Container>
       {jumboData.map((item) => (
         <Jumbotron key={item.id} direction={item.direction}>
           <Jumbotron.Pane>
@@ -22,7 +22,7 @@ const Container = () => {
             <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
           </Jumbotron.Pane>
           <Jumbotron.Pane>
-            <Jumbotron.Image src={item.image} alt={item.alt} />
+            <Jumbotron.Image id={`id${item.id}`} src={item.image} alt={item.alt} />
           </Jumbotron.Pane>
         </Jumbotron>
       ))}

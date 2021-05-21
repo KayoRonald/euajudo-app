@@ -30,4 +30,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: grey;
 }
+#id1,
+#id3 {
+  margin: 0 auto;
+}
 `
