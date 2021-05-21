@@ -1,18 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  background-color: color("dark", "darkest");
-  color: color("light");
-  padding: 3rem;
-  justify-items: center;
-  align-items: center;
+  padding: 1rem;
+  place-items: center;
+  -webkit-box-align: center;
   display: grid;
-  grid-row: start;
+  grid-row: start / start;
+   margin-top: 33px;
   img {
     width: 480px;
   }
