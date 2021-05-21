@@ -1,11 +1,11 @@
 import React from 'react';
+import Container from '../../containers/jumbotron';
 
-// import { Container } from './styles';
 
 export default function Landing(){
   return (
     <>
-      <h1>Hello, World</h1>
+     <Container />
     </>
   );
 }

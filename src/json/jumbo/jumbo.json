@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Eu Ajudo",
+    "subTitle": "A Fã-animation é um serviço de transmissão online feito por fãs para fãs (como próprio nome diz), que oferece uma ampla variedade de: séries animadas.",
+    "image": "https://thumbs.gfycat.com/BiodegradableWealthyEquestrian-size_restricted.gif",
+    "alt": "Tiger King on Netflix",
+    "direction": "row"
+  },
+  {
+    "id": 2,
+    "title": "Assista aos animes que marcaram a sua vida",
+    "subTitle": "Salve seus dados e assista a todos os seus favoritos offline. Em-breve",
+    "image": "https://hydra.bot/_nuxt/img/6540ccd.svg",
+    "alt": "Watch on mobile",
+    "direction": "row-reverse"
+  },
+  {
+    "id": 3,
+    "title": "Assista em todos os lugares.",
+    "subTitle": "Assista onde e quando quiser aos animes e encha de cor seu coração! Onde cada anime ganha vida em seus corações TOTALMENTE GRÁTIS",
+    "image": "https://i.ibb.co/FBsB6TD/ZeroTwo.webp",
+    "alt": "Zero Two",
+    "direction": "row"
+  }
+]
