@@ -4,11 +4,12 @@ import {
   BrowserRouter, Switch, Route 
 } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
+import FooterContainer from '../containers/footer';
 import {
   Home, PageNotFound, About
 } from '../pages';
 
-export default function AppRouter() {
+const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
         <Switch>
@@ -16,6 +17,9 @@ export default function AppRouter() {
           <Route path={ROUTES.ABOUT} component={About} />
           <Route component={PageNotFound} />
         </Switch>
+        <FooterContainer/>
     </BrowserRouter>
   );
 }
+
+export default AppRouter
