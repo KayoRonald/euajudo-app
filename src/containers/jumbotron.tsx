@@ -1,17 +1,18 @@
 import React from 'react';
 import { Jumbotron } from '../components';
-import jumboData from '../json/jumbo/jumbo.json';
+import jumboData from '../json/jumbo.json';
 
 // import { Container } from './styles';
 interface PropsJumbo {
   id: string;
   subTitle: string;
   image: String;
-  src?: any; 
+  src?: React.HTMLAttributes<HTMLDivElement>; 
   alt: string;
   direction: string;
 }
-const Container: React.FC<PropsJumbo> = () => {
+
+const Container: React.FC<PropsJumbo> = (props): JSX.Element => {
   return (
     <Jumbotron.Container>
       {jumboData.map((item) => (

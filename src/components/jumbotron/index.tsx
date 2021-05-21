@@ -6,7 +6,7 @@ import {
 type JumboProps = { 
   children?: React.ReactNode; 
   resPropos?: React.ReactNode;
-  direction?: string;
+  direction?: any;
 }
 
 export default function Jumbotron({ children, direction = 'row', ...restProps }: JumboProps){
