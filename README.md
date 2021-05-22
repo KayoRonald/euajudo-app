@@ -144,3 +144,7 @@ Esse projeto está sobre a licença MIT. Veja o arquivo **[LICENSE](LICENSE)** p
 <h4 align="center">
     <b>Realizado como trablho no <a href="https://www.ifpb.edu.br/picui">IFPB Campus Picuí. 💜</a></b>
 </h4>
+
+<p align="center">
+    <img src="https://miro.medium.com/max/1200/1*A1bEPfQeGGKp98z1cdctVA.png" alt="Eu Ajudo" width="450"/>
+</p>
