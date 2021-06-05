@@ -10,7 +10,7 @@
   {
     "id": 2,
     "title": "Venha cadastrar os pontos de vacina",
-    "subTitle": "Ajude a sua comunidade a encontrar os pontos mais próximo de vacinas da sua cidade."
+    "subTitle": "Ajude a sua comunidade a encontrar os pontos mais próximo de vacinas da sua cidade.",
     "image": "https://hydra.bot/_nuxt/img/6540ccd.svg",
     "alt": "Watch on mobile",
     "direction": "row-reverse"
