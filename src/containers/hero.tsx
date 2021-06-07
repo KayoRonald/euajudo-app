@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
                   fontSize={{ base: 'lg', lg: 'xl' }}
                   mt="6"
                 >
-                  Venhar colaborar com sua comunidade!
+                  Venha colaborar com a sua comunidadee!
               </Text>
               </Box>
               <Stack direction='column' spacing={4} mt={3}>
