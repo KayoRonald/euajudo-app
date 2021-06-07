@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Container from '../../containers/jumbotron';
+import Hero from '../../containers/hero'
 
-
-export default function Landing(){
+export default function Landing() {
   return (
-    <>
-     <Container />
-    </>
+    <Fragment>
+      <Hero />
+      <Container />
+    </Fragment>
   );
 }
