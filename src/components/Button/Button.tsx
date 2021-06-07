@@ -16,8 +16,9 @@ export default function Button() {
       fontSize="lg"
       fontWeight="semibold"
       transition="all 0.2s"
+      style={{justifyContent: 'center'}}
     >
-      <Text>Cadastrar ponto de Vacina!</Text>
+      <Text>Eu Ajudo</Text>
       <Box as={AiOutlineArrowRight} display="inline-block" ml="2" />
     </HStack>
   )
