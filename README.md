@@ -10,9 +10,9 @@
 </p>
 
 # 📖 **Sobre**
-O projeto **'Eu ajudo'** é uma aplicação Web realizada para que os usuários contribuam com sua comunidade através de mensagens realizadas no site. Assim promovendo uma melhoria na sua sociedade.
+O projeto **'Eu ajudo'** é uma aplicação Web realizada para que os usuários colabore com sua comunidade cadstrando os pontos de vacina em sua cidade no site. Assim que outras pessoas possam encontrar.
 
-Temos como propósito que a apropria comunidade contribuiam entre si, assim colaborando na sociedade. Então **venha ajudar sua comunidade!** 💜
+Temos como propósito que apropria comunidade se ajude entre si, assim colaborando na sociedade. Então venha ajudar sua comunidade!💜
 
 Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **Instituto Federal de Educação Ciência e Tecnologia da Paraíba Campus Picuí (IFPB)**. 🎓
 
