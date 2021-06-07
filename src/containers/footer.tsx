@@ -1,12 +1,12 @@
 import React from 'react';
 import { Footer } from '../components';
 import { Link } from 'react-router-dom';
-import { Box, Stack, Circle, Link as ChakraLink } from '@chakra-ui/react';
-import { AiFillTwitterCircle, AiFillInstagram } from 'react-icons/ai';
+import { Box, Stack, Link as ChakraLink } from '@chakra-ui/react';
+import { AiFillTwitterCircle, AiFillGithub } from 'react-icons/ai';
 import { FaDiscord } from 'react-icons/fa';
 import * as ROUTES from '../constants/routes';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-
+import Circle from '../components/Circle/Circle'
 export default function FooterContainer() {
   return (
     <Footer>
@@ -15,8 +15,8 @@ export default function FooterContainer() {
       <Footer.Row>
         <Footer.Column>
           <Footer.Texto>
-            <Link to="/" 
-            target="_blank">Ajuda/FAQ</Link>
+            <Link to="/"
+              target="_blank">Ajuda/FAQ</Link>
           </Footer.Texto>
           <Footer.Texto>Entre em contato</Footer.Texto>
           <Footer.Texto>Informações corporativas</Footer.Texto>
@@ -24,9 +24,9 @@ export default function FooterContainer() {
 
         <Footer.Column>
           <Footer.Texto>
-             <ChakraLink href="https://support-fa-animation-app.vercel.app/" isExternal>
-                Centro de ajuda <ExternalLinkIcon mx="2px" />
-             </ChakraLink>
+            <ChakraLink href="https://support-fa-animation-app.vercel.app/" isExternal>
+              Centro de ajuda <ExternalLinkIcon mx="2px" />
+            </ChakraLink>
           </Footer.Texto>
           <Footer.Texto>Termos de uso</Footer.Texto>
           <Footer.Texto>Entre em contato</Footer.Texto>
@@ -34,13 +34,13 @@ export default function FooterContainer() {
 
         <Footer.Column>
           <Footer.Texto>
-             <a href={ROUTES.TEAM}>Equipe</a>
+            <a href={ROUTES.TEAM}>Equipe</a>
           </Footer.Texto>
           <Footer.Texto>Privacidade</Footer.Texto>
           <Footer.Texto>
-             <ChakraLink href="https://fast.com/pt/" isExternal>
-                Teste de Internet <ExternalLinkIcon mx="2px" />
-             </ChakraLink>
+            <ChakraLink href="https://fast.com/pt/" isExternal>
+              Teste de Internet <ExternalLinkIcon mx="2px" />
+            </ChakraLink>
           </Footer.Texto>
         </Footer.Column>
 
@@ -52,41 +52,30 @@ export default function FooterContainer() {
       </Footer.Row>
       <Footer.Break />
       <Box textAlign="center">
-        <Stack mt={4} direction="row" spacing="12px" justify="center">
-          <Circle
-            target="_blank"
-            as="a"
-            rel="noopener"
-            size="40px"
-            bg="teal.500"
-            shadow="lg"
-            href="https://twitter.com/PhoenixStudioBr"
-          >
-            <AiFillTwitterCircle />
-          </Circle>
-          <Circle
-            target="_blank"
-            as="a"
-            rel="noopener"
-            size="40px"
-            bg="teal.500"
-            shadow="lg"
-          >
-            <AiFillInstagram />
-          </Circle>
-          <Circle
-            target="_blank"
-            as="a"
-            rel="noopener"
-            size="40px"
-            bg="teal.500"
-            shadow="lg"
-            href={ROUTES.DISCORD}
-          >
-            <FaDiscord />
-          </Circle>
-        </Stack>
+        <FooterIcon />
       </Box>
     </Footer>
   );
+}
+
+const FooterIcon = () => {
+  return (
+    <Stack mt={4} direction="row" spacing="12px" justify="center">
+      <Circle
+        link="https://twitter.com/PhoenixStudioBr"
+      >
+        <AiFillTwitterCircle />
+      </Circle>
+      <Circle
+        link="https://twitter.com/PhoenixStudioBr"
+      >
+        <AiFillGithub />
+      </Circle>
+      <Circle
+        link={ROUTES.DISCORD}
+      >
+        <FaDiscord />
+      </Circle>
+    </Stack>
+  )
 }
