@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   height: 100%;
   overflow-x: hidden;
-  /* background: #000 !important; */
   color: #fff;
 }
 a {
@@ -34,5 +33,14 @@ body::-webkit-scrollbar-thumb:hover {
 #id2 {
   margin: 0 auto;
   width: 394px!important
+}
+.chakra-accordion {
+  div:last-child {
+    border-bottom-width: 0 !important;
+  }
+}
+*:focus{
+  box-shadow: none !important;
+  text-decoration: nome !important;
 }
 `
