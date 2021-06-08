@@ -1,12 +1,12 @@
 import React from 'react';
-import { Footer } from '../components';
+import { Footer } from '../../components';
 import { Link } from 'react-router-dom';
 import { Box, Stack, Link as ChakraLink } from '@chakra-ui/react';
 import { AiFillTwitterCircle, AiFillGithub } from 'react-icons/ai';
 import { FaDiscord } from 'react-icons/fa';
-import * as ROUTES from '../constants/routes';
+import * as ROUTES from '../../constants/routes';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import Circle from '../components/Circle/Circle'
+import Circle from './Circle/'
 export default function FooterContainer() {
   return (
     <Footer>
@@ -67,7 +67,7 @@ const FooterIcon = () => {
         <AiFillTwitterCircle />
       </Circle>
       <Circle
-        link="https://twitter.com/PhoenixStudioBr"
+        link={ROUTES.GITHUB}
       >
         <AiFillGithub />
       </Circle>

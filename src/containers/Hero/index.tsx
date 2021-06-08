@@ -1,11 +1,11 @@
 import React from 'react'
-// import { AiOutlineArrowRight, AiOutlineTeam } from 'react-icons/ai'
 import {
   Box,
   Container, chakra, Text, Stack, Flex, Image
 } from '@chakra-ui/react';
-import help from '../image/svg/undraw_medical_care_movn.svg'
-import Button from '../components/Button/Button'
+import help from '../../image/svg/undraw_medical_care_movn.svg'
+import Button from './Button/'
+
 const Hero: React.FC = () => {
   return (
     <Box as="section" bg="rgb(14, 15, 19)">
@@ -19,7 +19,6 @@ const Hero: React.FC = () => {
           align="center"
           justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
           direction={{ base: 'column', md: 'row' }}
-          // flexWrap="no-wrap"
           minH="70vh"
           px={4}
           mb={16}

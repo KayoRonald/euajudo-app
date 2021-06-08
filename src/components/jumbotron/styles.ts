@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-// export interface Direction {
-//   direction: string;
-// }
+export interface Direction {
+  direction?: string;
+}
 
 export const Item = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Item = styled.div`
   overflow: hidden;
 `;
 
-export const Inner = styled.div`
+export const Inner = styled.div<Direction>`
   display: flex;
   align-items: center;
   justify-content: space-between;

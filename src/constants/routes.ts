@@ -1,7 +1,8 @@
 export const HOME = '/';
 export const ABOUT = '/about';
+export const APPMAP = '/app'
 // export const WELCOME = '/Welcome';
-// export const SIGN_UP = '/signup';
+export const GITHUB = 'https://github.com/KayoRonald/euajudo-app';
 // export const SIGN_IN = '/login';
 // export const FORGOT = '/forgot-password';
 export const TEAM = '/team';

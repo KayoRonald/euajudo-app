@@ -3,18 +3,21 @@
     "id": 1,
     "name": "Romulo",
     "avatar": "https://avatars.githubusercontent.com/u/7308958?v=4",
-    "cargo": "Orientador."
+    "cargo": "Orientador.",
+    "background": "#a6e4d0"
   },
   {
     "id": 2,
     "name": "Kayo Ronald",
-    "avatar": "https://i.ibb.co/nCy1fNz/download.webp",
-    "cargo": "Aluno"
+    "avatar": "https://avatars.githubusercontent.com/u/56506788?v=4",
+    "cargo": "Aluno.",
+    "background": "#e9bcbe"
   },
   {
     "id": 3,
     "name": "Gluaber",
     "avatar": "https://i.ibb.co/5B1vLbk/pp.jpg",
-    "cargo": "Aluno"
+    "cargo": "Aluno.",
+    "background": "#fdeb93"
   }
 ]

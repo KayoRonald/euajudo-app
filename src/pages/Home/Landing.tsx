@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Container from '../../containers/jumbotron';
-import Hero from '../../containers/hero'
+import Container from '../../containers/Jumbotron/index';
+import Hero from '../../containers/Hero/index'
 import Accordion  from '../../components/AccordionInfo/'
 export default function Landing() {
   return (
