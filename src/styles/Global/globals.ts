@@ -41,6 +41,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 *:focus{
   box-shadow: none !important;
-  text-decoration: nome !important;
+  text-decoration: none !important;
 }
 `
