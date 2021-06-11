@@ -5140,6 +5140,11 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+emailjs-com@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-3.0.2.tgz#d609f8e0e1ebf67eabf659684d5478b69809407f"
+  integrity sha512-nbVFnvCQfemx5kh1W+MNmRCayHhruRbg5mJX27bV8NrpzPfa0T/tOxTJQWk8asHJ9Lx0L2SVndEiMIxJp+fGAw==
+
 emittery@^0.7.1:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"

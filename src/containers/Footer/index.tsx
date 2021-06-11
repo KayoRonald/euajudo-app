@@ -1,12 +1,14 @@
 import React from 'react';
-import { Footer } from '../../components';
 import { Link } from 'react-router-dom';
 import { Box, Stack, Link as ChakraLink } from '@chakra-ui/react';
 import { AiFillTwitterCircle, AiFillGithub } from 'react-icons/ai';
-import { FaDiscord } from 'react-icons/fa';
-import * as ROUTES from '../../constants/routes';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import Circle from './Circle/'
+import { FaDiscord } from 'react-icons/fa';
+
+import { Footer } from '../../components';
+import * as ROUTES from '../../constants/routes';
+import Circle from './Circle/';
+
 export default function FooterContainer() {
   return (
     <Footer>
@@ -15,7 +17,7 @@ export default function FooterContainer() {
       <Footer.Row>
         <Footer.Column>
           <Footer.Texto>
-            <Link to="/"
+            <Link to={ROUTES.HOME}
               target="_blank">Ajuda/FAQ</Link>
           </Footer.Texto>
           <Footer.Texto>Entre em contato</Footer.Texto>
@@ -24,7 +26,7 @@ export default function FooterContainer() {
 
         <Footer.Column>
           <Footer.Texto>
-            <ChakraLink href="https://support-fa-animation-app.vercel.app/" isExternal>
+            <ChakraLink href={ROUTES.SUPPORT} isExternal>
               Centro de ajuda <ExternalLinkIcon mx="2px" />
             </ChakraLink>
           </Footer.Texto>
@@ -62,7 +64,7 @@ const FooterIcon = () => {
   return (
     <Stack mt={4} direction="row" spacing="12px" justify="center">
       <Circle
-        link="https://twitter.com/PhoenixStudioBr"
+        link={ROUTES.TWITTER}
       >
         <AiFillTwitterCircle />
       </Circle>
