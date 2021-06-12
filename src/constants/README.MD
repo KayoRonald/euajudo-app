@@ -1,9 +1,7 @@
 <h1>Configurações de links das rotas</h1>
 
-Na pasta 'constants', é onde vamos colocar os nomes
-de nossas rotas, por meio de variável, dessa forma 
-ó vamos precisar alterar somente um único arquivo. 
-Já que podemos alterar os nomes.
+Na pasta 'constants', é onde vamos colocar os nomes de nossas rotas, por meio de variável, dessa forma 
+vamos precisar alterar somente um único arquivo. Já que podemos alterar os nomes.
 
 
 ## Exemplo:
