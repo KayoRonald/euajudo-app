@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Rômulo",
+    "name": "Professor: Rômulo",
     "avatar": "https://avatars.githubusercontent.com/u/7308958?v=4",
     "cargo": "Orientador.",
     "background": "#a6e4d0"
   },
   {
     "id": 2,
-    "name": "Kayo Ronald",
+    "name": "Aluno: Kayo Ronald",
     "avatar": "https://avatars.githubusercontent.com/u/56506788?v=4",
-    "cargo": "Aluno.",
+    "cargo": "Front-end.",
     "background": "#e9bcbe"
   },
   {
     "id": 3,
-    "name": "Gluaber",
+    "name": "Aluno: Gluaber",
     "avatar": "https://avatars.githubusercontent.com/u/62349504?v=4",
-    "cargo": "Aluno.",
+    "cargo": "Back-end.",
     "background": "#fdeb93"
   }
 ]
