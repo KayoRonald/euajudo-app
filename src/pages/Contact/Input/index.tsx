@@ -5,27 +5,29 @@ import {
   InputGroup,
   InputLeftElement
 } from '@chakra-ui/react';
-import {
-  FiMail
-} from 'react-icons/fi';
-// type InpuProps = {
-//   type?: string;
-//   name?: string;
-// }
-const Input: React.FC<InputProps> = (props) => {
+
+interface InputPropsApp extends InputProps {
+  placeholder?: string;
+  type?: string;
+  iconLeft?: JSX.Element;
+}
+const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type, ...props }) => {
   const [focus, setFocus] = React.useState(false);
   return (
-    <InputGroup>
+    <InputGroup
+      {...props}
+    >
       <InputLeftElement
         width="3rem"
         height="100%"
         color={focus ? '#8257e5' : '#333'}
-        children={<FiMail />}
+        children={iconLeft}
         _focus={{ color: '#fff' }}
       />
       <ChakraInput
-        {...props}
         required
+        type={type}
+        placeholder={placeholder}
         focusBorderColor="purple.500"
         backgroundColor="gray.800"
         onFocus={(): void => setFocus(true)}

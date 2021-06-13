@@ -1,10 +1,18 @@
 import React, { Fragment } from 'react';
-import emailjs from 'emailjs-com'
+// import emailjs from 'emailjs-com'
 import {
   Flex,
-  Box, Heading, Text, FormControl, FormLabel, Textarea
-} from '@chakra-ui/react'
-import Input from './Input/'
+  Box, Heading, Text, 
+  FormControl, FormLabel, 
+  Textarea, Button
+} from '@chakra-ui/react';
+import Input from './Input/';
+import { 
+  AiOutlineUserDelete, 
+  AiOutlineMail,
+  AiFillFileText 
+} from 'react-icons/ai';
+import Helmet from 'react-helmet';
 const Contact: React.FC = () => {
   // function sendEmail(event: any) {
   //   event.preventDefault();
@@ -20,21 +28,23 @@ const Contact: React.FC = () => {
   // }
   return (
     <Fragment>
+      <Helmet title="Eu Ajudo | Contato" />
       <Flex
         id="anime"
         minHeight="100vh"
         width="full"
         align="center"
         justifyContent="center"
-      // onSubmit={sendEmail}
       >
         <Box
           backgroundColor="gray.700"
           px={4}
+          as="form"
           width="94%"
           maxWidth="500px"
           borderRadius="sm"
           textAlign="center"
+          // onSubmit={sendEmail}
         >
           <Box p={4}>
             <FormHeader />
@@ -47,7 +57,7 @@ const Contact: React.FC = () => {
 }
 const FormHeader = () => (
   <Box textAlign="center">
-    <Heading>Contato</Heading>
+    <Heading mb={2}>Contato</Heading>
     <Text>Detalhe o seu problema</Text>
   </Box>
 )
@@ -60,27 +70,46 @@ const ContactForm = () => {
         <Input
           type="text"
           placeholder="Insira o seu nome"
+          iconLeft={<AiOutlineUserDelete/>}
         />
       </FormControl>
-      <FormControl id="email">
+      <FormControl id="email" mt={2}>
         <FormLabel>Email:</FormLabel>
         <Input
           type="email"
           placeholder="Insira o seu endereço de email"
+          iconLeft={<AiOutlineMail/>}
         />
       </FormControl>
-      <FormControl id="descricao">
+      <FormControl id="descricao" mt={2}>
         <FormLabel>Descrição:</FormLabel>
         <Input
           type="text"
-          placeholder="Insira o sua descrição"
+          placeholder="Insira a sua descrição"
+          iconLeft={<AiFillFileText/>}
         />
       </FormControl>
-      <FormControl id="text">
+      <FormControl id="text" mt={2}>
         <FormLabel>Texto:</FormLabel>
-        <Textarea />
+        <Textarea placeholder="Coloque o seu texto aqui"/>
       </FormControl>
+      <ButtonSend/>
     </Box>
+  )
+}
+
+const ButtonSend = () =>{
+  return (
+    <Button
+      type="submit"
+      width="full"
+      mt={4}
+      outline="none"
+      _hover={{ backgroundColor: 'purple.600' }}
+      backgroundColor="purple.500"
+    >
+      Enviar
+    </Button>
   )
 }
 export default Contact
