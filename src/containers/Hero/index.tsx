@@ -1,12 +1,18 @@
 import React from 'react'
 import {
   Box,
-  Container, chakra, Text, Stack, Flex, Image
+  Container, chakra, Text, Stack, Flex, 
 } from '@chakra-ui/react';
-import help from '../../image/svg/undraw_medical_care_movn.svg'
+// import help from '../../image/svg/undraw_medical_care_movn.svg'
 import Button from './Button/'
-
+import Lottie from 'react-lottie';
+import animationData from '../../json/animation/52176-covid.json'
 const Hero: React.FC = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+  };
   return (
     <Box as="section" bg="rgb(14, 15, 19)">
       <Flex
@@ -52,7 +58,7 @@ const Hero: React.FC = () => {
               </Text>
               </Box>
               <Stack direction='column' spacing={4} mt={3}>
-                <Button/>
+                <Button />
               </Stack>
             </Container>
           </Box>
@@ -60,13 +66,19 @@ const Hero: React.FC = () => {
             w={{ base: '80%', sm: '60%', md: '50%' }}
             mb={{ base: 12, md: 0 }}
             display={{ base: 'none', sm: 'block' }}
+            justifyContent="center"
           >
-            <Image
+            <Lottie
+              options={defaultOptions}
+              height={400}
+              width={400}
+            />
+            {/* <Image
               src={help}
               size="100%"
               rounded="1rem"
               shadow="2xl"
-            />
+            /> */}
           </Box>
         </Flex>
       </Flex>
