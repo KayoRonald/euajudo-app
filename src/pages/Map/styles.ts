@@ -10,10 +10,9 @@ export const PageMap = styled.div`
     z-index: 5;
 }
  .create-vaccination-point {
-    position: absolute;
+    position: fixed;
     right: 40px;
-    bottom: 40px;
-
+    bottom: 50px;
     z-index: 10;
 
     width: 64px;
@@ -33,7 +32,7 @@ export const PageMap = styled.div`
 }
 
  .map-popup .leaflet-popup-content-wrapper {
-	background-color: #ffffffcc;
+	background-color: #000;
 	border-radius: 20px;
 	box-shadow: none;
 }

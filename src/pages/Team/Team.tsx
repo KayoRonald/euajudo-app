@@ -6,7 +6,8 @@ import {
 import { AiOutlineTeam } from 'react-icons/ai';
 import Helmet from 'react-helmet';
 import teamDate from '../../json/team/team.json';
-
+import FooterContainer from '../../containers/Footer/'
+import * as ROUTES from '../../constants/routes'
 type TeamProps = {
   id: number;
   name: string;
@@ -31,6 +32,8 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
             mb="5"
             fontWeight="bold"
             fontSize="2rem"
+            as="a"
+            href={ROUTES.HOME}
           >
             Eu Ajudo
           </chakra.h1>
@@ -68,18 +71,34 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
                         {member.name}
                       </Text>
                       <Text>
-                        Ocupação:
-                        {' '}
                         {member.cargo}
                       </Text>
                     </Stack>
                   </Stack>
                 </Box>
               ))}
+              <Box
+                border="4px dashed"
+                borderColor="purple.500"
+                padding={7}
+                borderRadius="4px"
+                key="5"
+              >
+                <Stack direction="row" spacing={6}>
+                  <Stack spacing={3} maxW="320px">
+                    <Box justifyContent="center" alignItems="center">
+                      <Text fontWeight="bold" fontSize="md">
+                        Eu Ajudo, venha participar você também!
+                    </Text>
+                    </Box>
+                  </Stack>
+                </Stack>
+              </Box>
             </SimpleGrid>
           </Stack>
         </Container>
       </Box>
+      <FooterContainer />
     </Fragment>
   )
 }

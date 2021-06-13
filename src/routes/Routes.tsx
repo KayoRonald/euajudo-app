@@ -4,9 +4,8 @@ import {
   BrowserRouter, Switch, Route 
 } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
-import FooterContainer from '../containers/Footer/';
 import {
-  Home, PageNotFound, About, Map, Team
+  Home, PageNotFound, About, Map, Team, Contact
 } from '../pages';
 
 const AppRouter: React.FC = () => {
@@ -17,9 +16,9 @@ const AppRouter: React.FC = () => {
           <Route path={ROUTES.ABOUT} component={About} />
           <Route path={ROUTES.APPMAP} component={Map} />
           <Route path={ROUTES.TEAM} component={Team} />
+          <Route path={ROUTES.SENDMAIL} component={Contact} />
           <Route component={PageNotFound} />
         </Switch>
-        <FooterContainer/>
     </BrowserRouter>
   );
 }
