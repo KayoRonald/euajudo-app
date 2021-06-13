@@ -31,7 +31,11 @@ export default function FooterContainer() {
             </ChakraLink>
           </Footer.Texto>
           <Footer.Texto>Termos de uso</Footer.Texto>
-          <Footer.Texto>Entre em contato</Footer.Texto>
+          <Footer.Texto>
+            <ChakraLink href={ROUTES.SENDMAIL} isExternal>
+              Entre em contato <ExternalLinkIcon mx="2px" />
+            </ChakraLink>
+          </Footer.Texto>
         </Footer.Column>
 
         <Footer.Column>
@@ -47,7 +51,11 @@ export default function FooterContainer() {
         </Footer.Column>
 
         <Footer.Column>
-          <Footer.Texto>Reportar falhas</Footer.Texto>
+          <Footer.Texto>
+            <ChakraLink href={ROUTES.SENDMAIL} isExternal>
+              Reportar falhas <ExternalLinkIcon mx="2px" />
+            </ChakraLink>
+          </Footer.Texto>
           <Footer.Texto>Politica de Cookies</Footer.Texto>
           <Footer.Texto>Pedidos de animes</Footer.Texto>
         </Footer.Column>
