@@ -131,7 +131,6 @@ Ao inicia o projeto abrirar a rota [localhost:3000](http://localhost:3000/)
 2 Alunos
 - Kayo Ronald (Kyler Kai)
 - Gledson Glauber
-- Rúdson
 </blockquote>
 
 <br/>
