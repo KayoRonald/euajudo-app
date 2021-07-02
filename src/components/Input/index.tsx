@@ -10,9 +10,10 @@ interface InputPropsApp extends InputProps {
   placeholder?: string;
   type?: string;
   iconLeft?: JSX.Element;
+  name?: string;
 }
-const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type, ...props }) => {
-  const [focus, setFocus] = React.useState(false);
+const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type,name, ...props }) => {
+  const [focus, setFocus] = React.useState<boolean>(false);
   return (
     <InputGroup
       {...props}
@@ -26,6 +27,7 @@ const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type, ...props 
       />
       <ChakraInput
         required
+        name={name}
         type={type}
         placeholder={placeholder}
         focusBorderColor="purple.500"
