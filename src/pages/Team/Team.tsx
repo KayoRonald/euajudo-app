@@ -40,8 +40,7 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
           </chakra.h1>
           <Text mx="auto" fontSize="lg">
             App criado para intermediar pedidos durante isolamento social. O projeto 'Eu ajudo' é uma aplicação 
-            Web realizada para que os usuários colabore com sua comunidade cadstrando os pontos de vacina em 
-            sua cidade no site. Assim que outras pessoas possam encontrar.
+            Web realizada para que os usuários colabore com sua comunidade.
           </Text>
         </Container>
       </Box>
