@@ -7,7 +7,8 @@ import { AiOutlineTeam } from 'react-icons/ai';
 import Helmet from 'react-helmet';
 import teamDate from '../../json/team/team.json';
 import FooterContainer from '../../containers/Footer/'
-import * as ROUTES from '../../constants/routes'
+import * as ROUTES from '../../constants/routes';
+
 type TeamProps = {
   id: number;
   name: string;
@@ -38,7 +39,9 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
             Eu Ajudo
           </chakra.h1>
           <Text mx="auto" fontSize="lg">
-            App criado para intermediar pedidos durante isolamento social.
+            App criado para intermediar pedidos durante isolamento social. O projeto 'Eu ajudo' é uma aplicação 
+            Web realizada para que os usuários colabore com sua comunidade cadstrando os pontos de vacina em 
+            sua cidade no site. Assim que outras pessoas possam encontrar.
           </Text>
         </Container>
       </Box>
