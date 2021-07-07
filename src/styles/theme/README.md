@@ -8,6 +8,32 @@ Dentro dessa pasta, você pode ter uma estrutura de diretório semelhante a esta
 No index.ts, é o arquivo que vai ser responsável por personalizar os valores do tema padrão,
 usando a função <code>extendTheme</code>. Esse arquivo vai ser chamado no App.ts.
 Pelo compomente <<code>ChakraProvider theme={theme}</code>/>.
+
+```ts
+import { extendTheme } from '@chakra-ui/react'
+
+// Global style overrides
+import styles from './styles'
+
+// Foundational style overrides
+import colors from './foundations/colors'
+import radii from './foundations/radii'
+import {
+  fonts, fontSizes, fontWeights
+} from './foundations/fonts'
+
+const theme = extendTheme({
+  styles,
+  colors,
+  fonts,
+  fontWeights,
+  fontSizes,
+  radii
+})
+
+export default theme
+```
+
 <br/>
 No styles.ts, é o arquivo que vai sobrescrever os estilos globais do chakra.
 
