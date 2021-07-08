@@ -76,14 +76,14 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 <br/>
 
 
-**1° Faça um clone do repositório:**
+**1. Faça um clone do repositório:**
 ```bash
  git clone https://github.com/KayoRonald/euajudo-app.git
 ```
 
 **2. Executando a Aplicação:**
 
-No diretório no projeto, você pode executar:
+No diretório do projeto, você pode executar:
 ```bash
   cd euajudo-app 
 ```
