@@ -4,3 +4,4 @@ export { default as PageNotFound } from './PageNotFound/PageNotFound';
 export { default as Map } from './Map/Map';
 export { default as Team } from './Team/Team';
 export { default as Contact } from './Contact/Contact';
+export { default as CreatePoint } from './CreatePoint/CreatePoint';

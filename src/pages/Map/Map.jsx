@@ -6,7 +6,7 @@ import { Map as MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { PageMap } from './styles';
 import mapMarker from '../../image/svg/map-marker.svg';
 import Helmet from 'react-helmet';
-
+import * as ROUTES from '../../constants/routes'
 const mapIcon = Leaflet.icon({
   iconUrl: mapMarker,
 
@@ -43,7 +43,7 @@ function MapHelp() {
         </Marker>
       </MapContainer>
 
-      <Link to="/vaccination-point/create" className="create-vaccination-point">
+      <Link to={ROUTES.CREATEPOINT} className="create-vaccination-point">
         <FiPlus size={32} color="#FFF" />
       </Link>
     </PageMap>

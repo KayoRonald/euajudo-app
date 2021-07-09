@@ -3,9 +3,9 @@ import React from 'react';
 import { 
   BrowserRouter, Switch, Route 
 } from 'react-router-dom';
-import * as ROUTES from '../constants/routes';
+import * as ROUTES from '../constants/routes'; //todos os links estão dentro de 'constants'.
 import {
-  Home, PageNotFound, About, Map, Team, Contact
+  Home, PageNotFound, About, Map, Team, Contact, CreatePoint
 } from '../pages';
 
 const AppRouter: React.FC = () => {
@@ -17,6 +17,7 @@ const AppRouter: React.FC = () => {
           <Route path={ROUTES.APPMAP} component={Map} />
           <Route path={ROUTES.TEAM} component={Team} />
           <Route path={ROUTES.SENDMAIL} component={Contact} />
+          <Route path={ROUTES.CREATEPOINT} component={CreatePoint} />
           <Route component={PageNotFound} />
         </Switch>
     </BrowserRouter>
