@@ -20,9 +20,7 @@ type TeamProps = {
 const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
   return (
     <Fragment>
-      <Helmet>
-        <title>Eu Ajudo | Equipe</title>
-      </Helmet>
+      <Helmet title="Eu Ajudo | Equipe" />
 
       <Box mb="60px" as="section">
         <Container py="80px" textAlign="center">
