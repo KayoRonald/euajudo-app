@@ -67,7 +67,7 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 
 - É necessário possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador (recomendado a versão LTS).
 
-- Também, é preciso ter um gerenciador de pacotes o npm e npx já vem por padão ao instalar o node.j ou **[Yarn](https://www.npmjs.com/package/yarn)**.
+- Também, é preciso ter um gerenciador de pacotes o npm e npx já vem por padrão ao instalar o node.j ou **[Yarn](https://www.npmjs.com/package/yarn)**.
 
 - É necessário possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
   
