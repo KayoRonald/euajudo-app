@@ -31,7 +31,8 @@ Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **
         <br />
         <sub><b>Rômulo Costa</b>
         </sub></a><br />
-      <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">👨Orientador</a>
+      <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">👨
+Orientador</a>
     </td>
        <td align="center">
       <a href="https://euajudo-app.vercel.app/">
@@ -39,7 +40,7 @@ Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **
         <br />
         <sub><b>Kayo Ronald</b>
         </sub></a><br />
-      <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">Front-end🚀</a>
+      <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">Front-end</a>
     </td>
      <td align="center">
       <a href="https://euajudo-app.vercel.app/">
