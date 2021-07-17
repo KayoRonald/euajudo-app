@@ -20,7 +20,7 @@ export default function FooterContainer() {
             <Link to={ROUTES.HOME}
               target="_blank">Ajuda/FAQ</Link>
           </Footer.Texto>
-          <Footer.Texto>Entre em contato</Footer.Texto>
+          <Footer.Texto>Aplicativo pra celular</Footer.Texto>
           <Footer.Texto>Informações corporativas</Footer.Texto>
         </Footer.Column>
 
