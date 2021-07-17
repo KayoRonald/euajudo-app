@@ -57,7 +57,7 @@ export default function FooterContainer() {
             </ChakraLink>
           </Footer.Texto>
           <Footer.Texto>Politica de Cookies</Footer.Texto>
-          <Footer.Texto>Pedidos de animes</Footer.Texto>
+          <Footer.Texto>Sobre o Eu Ajudo</Footer.Texto>
         </Footer.Column>
       </Footer.Row>
       <Footer.Break />
