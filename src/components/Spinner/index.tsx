@@ -10,6 +10,7 @@ const SpinnerPage: React.FC = () => {
       d="flex"
       alignItems="center"
       justifyContent="center"
+      bg="#000"
 
     >
       <Box display="inline-block">

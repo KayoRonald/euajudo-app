@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 import teamDate from '../../json/team/team.json';
 import FooterContainer from '../../containers/Footer/'
 import * as ROUTES from '../../constants/routes';
-
+import NavBar from './NavBar/'
 type TeamProps = {
   id: number;
   name: string;
@@ -23,6 +23,7 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
       <Helmet title="Eu Ajudo | Equipe" />
 
       <Box mb="60px" as="section">
+        <NavBar/>
         <Container py="80px" textAlign="center">
           <chakra.h1
             bgGradient="linear(to-l, #7928CA,#FF0080)"
