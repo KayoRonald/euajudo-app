@@ -1,11 +1,14 @@
-import React from 'react';
-import AppRouter from './routes/Routes';
+import React, { Suspense } from 'react';
 import ThemeProvider from './theme/'
+import Spinner from './components/Spinner/'
+const AppRouter = React.lazy(() => import('./routes/Routes'));
 
 export default function App() {
   return (
     <ThemeProvider>
-      <AppRouter />
-    </ThemeProvider>  
+      <Suspense fallback={<Spinner />}>
+        <AppRouter />
+      </Suspense>
+    </ThemeProvider>
   );
 }
