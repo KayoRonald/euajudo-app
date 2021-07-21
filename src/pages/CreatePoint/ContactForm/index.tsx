@@ -3,11 +3,13 @@ import {
   AiOutlineUserDelete,
   AiOutlineMail,
   AiFillFileText,
-  AiFillPhone
+  AiFillPhone,
+  AiOutlineTeam
 } from 'react-icons/ai';
+import { GrWaypoint } from 'react-icons/gr'
 import {
   Box,
-  FormControl, FormLabel, Button, Alert, AlertIcon
+  FormControl, FormLabel, Button, Alert, AlertIcon, SimpleGrid
 } from '@chakra-ui/react';
 import Leaflet, { LeafletMouseEvent } from "leaflet"
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet'
@@ -49,15 +51,27 @@ const ContactForm: React.FC = () => {
         />
       </MapContainer>
       <AlertPoint />
-      <FormControl id="nome" mt={4}>
-        <FormLabel>Nome:</FormLabel>
-        <Input
-          type="text"
-          placeholder="Insira o seu nome"
-          name="name"
-          iconLeft={<AiOutlineUserDelete />}
-        />
-      </FormControl>
+      <SimpleGrid columns={[1, 1, 2]} spacing={2}>
+        <FormControl id="nome" mt={1}>
+          <FormLabel>Nome:</FormLabel>
+          <Input
+            type="text"
+            placeholder="Insira o seu nome"
+            name="name"
+            iconLeft={<AiOutlineUserDelete />}
+          />
+        </FormControl>
+        <FormControl id="descricao" mt={1}>
+          <FormLabel>Número para contato:</FormLabel>
+          <Input
+            type="text"
+            name="subjetc"
+            placeholder="Insira a sua descrição"
+            iconLeft={<AiFillPhone />}
+          />
+        </FormControl>
+      </SimpleGrid>
+
       <FormControl id="email" mt={2}>
         <FormLabel>Email:</FormLabel>
         <Input
@@ -67,6 +81,15 @@ const ContactForm: React.FC = () => {
           iconLeft={<AiOutlineMail />}
         />
       </FormControl>
+      <FormControl id="email" mt={2}>
+        <FormLabel>Nome do local:</FormLabel>
+        <Input
+          type="text"
+          name="textPoint"
+          placeholder="Insira o seu ponto"
+          iconLeft={<AiOutlineTeam />}
+        />
+      </FormControl>
       <FormControl id="descricao" mt={2}>
         <FormLabel>Descrição:</FormLabel>
         <Input
@@ -74,15 +97,6 @@ const ContactForm: React.FC = () => {
           name="subjetc"
           placeholder="Insira a sua descrição"
           iconLeft={<AiFillFileText />}
-        />
-      </FormControl>
-      <FormControl id="descricao" mt={2}>
-        <FormLabel>Número para contato:</FormLabel>
-        <Input
-          type="text"
-          name="subjetc"
-          placeholder="Insira a sua descrição"
-          iconLeft={<AiFillPhone />}
         />
       </FormControl>
       <ButtonSend />
@@ -101,6 +115,7 @@ const ButtonSend = () => {
       outline="none"
       _hover={{ backgroundColor: 'purple.600' }}
       backgroundColor="purple.500"
+      leftIcon={<GrWaypoint />}
     >
       Enviar
     </Button>
@@ -109,7 +124,7 @@ const ButtonSend = () => {
 
 const AlertPoint = () => {
   return (
-    <Alert status="info" mt={4}>
+    <Alert status="info" mt={4} borderRadius={2}>
       <AlertIcon />
       Escolhar um local no mapa
     </Alert >
