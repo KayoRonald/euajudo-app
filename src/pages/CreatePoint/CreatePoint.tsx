@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import {
-  Flex,Box
+  Flex, Box
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm/'
 import FormHeader from '../../components/FormHeader/'
-
+import { Footer } from './styles/styles'
 const CreatePont: React.FC = () => {
   return (
     <Fragment>
@@ -29,14 +29,20 @@ const CreatePont: React.FC = () => {
           mb={6}
         >
           <Box p={4}>
-            <FormHeader 
-              heading="Criação de Pontos" 
+            <FormHeader
+              heading="Criação de Pontos"
               text="Vem ajudar sua comunidade!"
             />
             <ContactForm />
           </Box>
         </Box>
       </Flex>
+      <Footer>
+        <h4
+          style={{color: '#8092A8', fontWeight: 400 }}
+        >© 2021 - Desenvolvido por Eu Ajudo
+        </h4>
+      </Footer>
     </Fragment>
   )
 }
