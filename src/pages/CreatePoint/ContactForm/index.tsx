@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   AiOutlineUserDelete,
-  AiOutlineMail,
   AiFillFileText,
   AiFillPhone,
   AiOutlineTeam
@@ -31,6 +30,7 @@ const ContactForm: React.FC = () => {
     const { lat, lng } = event.latlng
     setPosition({ latitude: lat, longitude: lng })
   }
+  
   return (
     <Box my={8} textAlign="left">
       <MapContainer
@@ -71,16 +71,6 @@ const ContactForm: React.FC = () => {
           />
         </FormControl>
       </SimpleGrid>
-
-      <FormControl id="email" mt={2}>
-        <FormLabel>Email:</FormLabel>
-        <Input
-          type="email"
-          name="email"
-          placeholder="Insira o seu endereço de email"
-          iconLeft={<AiOutlineMail />}
-        />
-      </FormControl>
       <FormControl id="email" mt={2}>
         <FormLabel>Nome do local:</FormLabel>
         <Input
