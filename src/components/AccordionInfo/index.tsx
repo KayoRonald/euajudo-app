@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react'
 import faqDate from '../../json/faq/faq.json'
 import { Circle, StrongText, SpanText } from './style'
-import { MinusIcon, AddIcon  } from '@chakra-ui/icons'
+
 type AccordionProps = {
   id?: number;
   header?: string;
