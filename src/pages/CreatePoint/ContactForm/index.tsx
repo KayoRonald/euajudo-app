@@ -14,20 +14,42 @@ import { LeafletMouseEvent } from "leaflet"
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet'
 import Input from '../../../components/Input/';
 import mapIcon from '../../../utils/'
+import swal from 'sweetalert';
 
 
 const ContactForm: React.FC = () => {
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 })
+  const [state, setState] = React.useState({
+    long: 0,
+    lat: 0
+  })
+
+  React.useEffect(() => {
+    // Pegando a localização do usuario
+    navigator.geolocation.getCurrentPosition(
+      function (posstion) {
+        setState({
+          long: posstion.coords.longitude,
+          lat: posstion.coords.latitude,
+        })
+      }, function (error) {
+        swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
+        console.log(error)
+      },{
+        enableHighAccuracy: true,
+      }
+    )
+  }, [])
 
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng
     setPosition({ latitude: lat, longitude: lng })
   }
-  
+
   return (
     <Box my={8} textAlign="left">
       <MapContainer
-        center={[-6.4019317, -36.4511400]}
+        center={[state.lat, state.long]}
         zoom={15.7}
         style={
           { width: '100%', height: 280, borderRadius: 7 }

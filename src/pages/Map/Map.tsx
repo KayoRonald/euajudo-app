@@ -25,8 +25,11 @@ function MapHelp() {
           lat: posstion.coords.latitude,
         })
       }, function (error) {
-        swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
+        swal("Ops!", "Você permin :(", "error");
         console.log(error)
+      },{
+        enableHighAccuracy: true,
+        timeout: 60000,
       }
     )
   }, [])
