@@ -5,10 +5,10 @@ import {
   AiFillPhone,
   AiOutlineTeam
 } from 'react-icons/ai';
-import { GrWaypoint } from 'react-icons/gr'
+import { GrWaypoint, GrInfo } from 'react-icons/gr'
 import {
   Box,
-  FormControl, FormLabel, Button, Alert, AlertIcon, SimpleGrid
+  FormControl, FormLabel, Button, Alert, Text, SimpleGrid, Icon
 } from '@chakra-ui/react';
 import { LeafletMouseEvent } from "leaflet"
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet'
@@ -129,8 +129,8 @@ const ButtonSend = () => {
 const AlertPoint = () => {
   return (
     <Alert status="info" mt={4} borderRadius={2}>
-      <AlertIcon />
-      Escolhar um local no mapa
+      <Icon as={GrInfo} />
+      <Text paddingLeft={2} color="primary.200" fontWeight="bold">Escolhar um local no mapa</Text>
     </Alert >
   )
 }

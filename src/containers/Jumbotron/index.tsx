@@ -3,7 +3,7 @@ import { Jumbotron } from '../../components';
 import jumboData from '../../json/jumbo.json';
 
 // import { Container } from './styles';
-interface PropsJumbo {
+type PropsJumbo = {
   id?: number;
   subTitle?: string;
   image?: String;

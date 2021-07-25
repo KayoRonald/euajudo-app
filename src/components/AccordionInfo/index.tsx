@@ -9,8 +9,8 @@ import {
 } from '@chakra-ui/react'
 import faqDate from '../../json/faq/faq.json'
 import { Circle, StrongText, SpanText } from './style'
-
-interface AccordionProps {
+import { MinusIcon, AddIcon  } from '@chakra-ui/icons'
+type AccordionProps = {
   id?: number;
   header?: string;
   body?: string;
@@ -22,7 +22,7 @@ const Accordion: React.FC<AccordionProps> = ({ id, header, body }) => {
       <Center marginBottom={5}>
         <Heading as="h2">Perguntas frequentes</Heading>
       </Center>
-      <ChakraAccordion allowMultiple>
+      <ChakraAccordion allowToggle>
         {faqDate.map((faq) => (
           <AccordionItem key={faq.id} borderTopWidth={0} borderBottomWidth={0} marginBottom="3px">
             <h2>
