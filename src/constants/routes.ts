@@ -8,3 +8,4 @@ export const CREATEPOINT = '/create-point';
 export const DISCORD = 'https://discord.gg/cuMzJwC99G';
 export const TWITTER = 'https://twitter.com/PhoenixStudioBr';
 export const SUPPORT = 'https://support-fa-animation-app.vercel.app/';
+export const APPGITHUB = 'https://github.com/KayoRonald/eu-ajudo-mobile';
