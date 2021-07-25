@@ -10,18 +10,11 @@ import {
   Box,
   FormControl, FormLabel, Button, Alert, AlertIcon, SimpleGrid
 } from '@chakra-ui/react';
-import Leaflet, { LeafletMouseEvent } from "leaflet"
+import { LeafletMouseEvent } from "leaflet"
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet'
-import mapMarker from '../../../image/svg/map-marker.svg';
 import Input from '../../../components/Input/';
+import mapIcon from '../../../utils/'
 
-const mapIcon = Leaflet.icon({
-  iconUrl: mapMarker,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -70]
-})
 
 const ContactForm: React.FC = () => {
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 })
