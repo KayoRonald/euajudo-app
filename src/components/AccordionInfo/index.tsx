@@ -37,8 +37,8 @@ const Accordion: React.FC<AccordionProps> = ({ id, header, body }) => {
                       0
                       <span style={{ color: '#04D361' }}>
                         {faq.id}
-                      .
-                    </span>
+                        .
+                      </span>
                     </SpanText>
                   </StrongText>
                   {' '}

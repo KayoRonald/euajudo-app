@@ -2,8 +2,7 @@ import React, { Fragment } from 'react';
 import emailjs from 'emailjs-com'
 import {
   Flex,
-  Box, Heading, Text,
-  FormControl, FormLabel,
+  Box, FormControl, FormLabel,
   Textarea, Button
 } from '@chakra-ui/react';
 import swal from 'sweetalert';
@@ -14,6 +13,7 @@ import {
 } from 'react-icons/ai';
 import Helmet from 'react-helmet';
 import Input from '../../components/Input/';
+import FormHeader from '../../components/FormHeader/'
 
 const Contact: React.FC = () => {
   function sendEmail(event: any) {
@@ -50,7 +50,10 @@ const Contact: React.FC = () => {
           textAlign="center"
         >
           <Box p={4}>
-            <FormHeader />
+            <FormHeader
+              heading="Contato"
+              text="Detalhe o seu problema"
+            />
             <ContactForm />
           </Box>
         </Box>
@@ -58,12 +61,6 @@ const Contact: React.FC = () => {
     </Fragment>
   )
 }
-const FormHeader = () => (
-  <Box textAlign="center">
-    <Heading mb={2}>Contato</Heading>
-    <Text>Detalhe o seu problema</Text>
-  </Box>
-)
 
 const ContactForm = () => {
   return (
@@ -97,10 +94,10 @@ const ContactForm = () => {
       </FormControl>
       <FormControl id="text" mt={2}>
         <FormLabel>Texto:</FormLabel>
-        <Textarea 
-          placeholder="Coloque o seu texto aqui" 
-          name="message"  
-          required 
+        <Textarea
+          placeholder="Coloque o seu texto aqui"
+          name="message"
+          required
         />
       </FormControl>
       <ButtonSend />

@@ -6,7 +6,4 @@ export const Footer = styled.div`
     height: 80px;
     justify-content: center;
     align-items: center;
-    /* @media (max-width: 386px){
-        display: none;
-    } */
 `;
