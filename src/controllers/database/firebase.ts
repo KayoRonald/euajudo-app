@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-import "firebase/database";
+import "firebase/storage";
 
 //Coloque seus dados do firebase em um arquivo .env
 
@@ -13,5 +13,5 @@ const app = firebase.initializeApp({
   appId: process.env.REACT_APP_APPID,
 });
 
-const database = firebase.database();
-export default database;
+const database = firebase.storage();
+export { firebase, database};
