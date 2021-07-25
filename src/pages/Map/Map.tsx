@@ -18,14 +18,13 @@ function MapHelp() {
 
   React.useEffect(() => {
     // Pegando a localização do usuario
-    navigator.geolocation.getCurrentPosition(
-      function (posstion) {
+    navigator.geolocation.getCurrentPosition((posstion) => {
         setState({
           long: posstion.coords.longitude,
           lat: posstion.coords.latitude,
         })
-      }, function (error) {
-        swal("Ops!", "Você permin :(", "error");
+      }, (error) => {
+        swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
         console.log(error)
       },{
         enableHighAccuracy: true,
