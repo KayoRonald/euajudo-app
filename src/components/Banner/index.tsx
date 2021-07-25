@@ -66,7 +66,7 @@ const Banner: React.FC = () => {
             color="white"
             fontSize="lg"
             fontWeight="semibold"
-            width="40%"
+            width="20rem"
             transition="all 0.2s"
             style={{ justifyContent: 'center' }}
           >
