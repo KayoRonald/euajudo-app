@@ -58,6 +58,15 @@ Orientador</a>
 <br/>
 <hr/>
 
+### Aviso
+Quando for executar o código, possivelmente o tsconfig vai ser gerado novamente. Assim, ele vai sobrescrever uma linha, como o exemplo demostra:
+Código atual
+> "jsx": "react"
+
+Código depois da primeira execução:
+> "jsx": "react-jsx"
+
+O código que foi acabado de ser mostrado vai causar um erro somente visual em seu respectivo editor, então devemos colocar somente o nome "react", para retirar o erro visual. Não vai compromenter a execução de seu projeto.
 ## 🤔 **Como contribuir?**
 
 - Faça um `fork` desse repositório;
