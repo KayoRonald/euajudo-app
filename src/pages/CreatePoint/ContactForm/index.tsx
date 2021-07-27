@@ -79,8 +79,8 @@ const ContactForm: React.FC = () => {
           <FormLabel>Número para contato:</FormLabel>
           <Input
             type="text"
-            name="subjetc"
-            placeholder="Insira a sua descrição"
+            name="contactNumber"
+            placeholder="Número de contato"
             iconLeft={<AiFillPhone />}
           />
         </FormControl>
@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
         <FormLabel>Nome do local:</FormLabel>
         <Input
           type="text"
-          name="textPoint"
+          name="pointName"
           placeholder="Insira o seu ponto"
           iconLeft={<AiOutlineTeam />}
         />
@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
         <FormLabel>Descrição:</FormLabel>
         <Input
           type="text"
-          name="subjetc"
+          name="description"
           placeholder="Insira a sua descrição"
           iconLeft={<AiFillFileText />}
         />
