@@ -3,7 +3,7 @@ import {
   Input as ChakraInput,
   InputProps,
   InputGroup,
-  InputLeftElement
+  InputLeftElement,
 } from '@chakra-ui/react';
 
 interface InputPropsApp extends InputProps {
@@ -12,7 +12,7 @@ interface InputPropsApp extends InputProps {
   iconLeft?: JSX.Element;
   name?: string;
 }
-const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type,name, ...props }) => {
+const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type, name, ...props }) => {
   const [focus, setFocus] = React.useState<boolean>(false);
   return (
     <InputGroup
@@ -36,7 +36,7 @@ const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type,name, ...p
         rounded="lg"
       />
     </InputGroup>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;

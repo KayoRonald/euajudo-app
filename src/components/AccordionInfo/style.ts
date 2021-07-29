@@ -9,7 +9,8 @@ export const Circle = styled.div`
 
 export const StrongText = styled.strong`
   font-size: 16px;
-`
+`;
+
 export const SpanText = styled.span`
   color: '#737380';
-`
+`;

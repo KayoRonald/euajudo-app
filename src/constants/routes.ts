@@ -1,6 +1,6 @@
 export const HOME = '/';
 export const ABOUT = '/about';
-export const APPMAP = '/app'
+export const APPMAP = '/app';
 export const GITHUB = 'https://github.com/KayoRonald/euajudo-app';
 export const TEAM = '/team';
 export const SENDMAIL = '/sendmail';

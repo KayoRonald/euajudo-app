@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import {
-  Flex, Box
+  Flex, Box,
 } from '@chakra-ui/react';
-import ContactForm from './ContactForm/'
-import FormHeader from '../../components/FormHeader/'
-import { Footer } from './styles/styles'
+import ContactForm from './ContactForm/';
+import FormHeader from '../../components/FormHeader/';
+import { Footer } from './styles/styles';
 const CreatePont: React.FC = () => {
   return (
-    <Fragment>
+    <React.Fragment key="key">
       <Helmet title="Eu Ajudo | Criação de Pontos" />
       <Flex
         id="anime"
@@ -39,12 +39,12 @@ const CreatePont: React.FC = () => {
       </Flex>
       <Footer>
         <h4
-          style={{color: '#8092A8', fontWeight: 400 }}
+          style={{ color: '#8092A8', fontWeight: 400 }}
         >© 2021 - Desenvolvido por Eu Ajudo
         </h4>
       </Footer>
-    </Fragment>
-  )
-}
+    </React.Fragment>
+  );
+};
 
-export default CreatePont
+export default CreatePont;

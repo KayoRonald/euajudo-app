@@ -62,7 +62,8 @@ export const SubTitle = styled.h2`
   @media (max-width: 600px) {
     font-size: 18px;
   }
-`
+`;
+
 export const Image = styled.img`
   max-width: 100%;
   height: auto;

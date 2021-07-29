@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import { 
-  Circle as ChakraCircle
-} from '@chakra-ui/react'
+import {
+  Circle as ChakraCircle,
+} from '@chakra-ui/react';
 
 type CircleProps = {
   children?: React.ReactNode;
@@ -22,7 +22,7 @@ const Circle: React.FC<CircleProps> = ({ children, link }) => {
     >
       {children}
     </ChakraCircle>
-  )
-}
+  );
+};
 
-export default Circle
+export default Circle;

@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Box, Container, Flex, Heading, SimpleGrid, Stack, Text, Image, Center, HStack } from '@chakra-ui/react';
-import bannerImg from '../../image/undraw_version.svg';
 import { AiFillGithub } from 'react-icons/ai';
+import bannerImg from '../../image/undraw_version.svg';
 const Banner: React.FC = () => {
   return (
     <Box as="section" bg="#0e0f13" color="white" overflow="hidden" mt={5}>
       <Container pt="5px" pb="0" maxWidth="80ch">
-        <Flex align="center" direction="column" textAlign="center" mb="10" >
+        <Flex align="center" direction="column" textAlign="center" mb="10">
           <Heading
             mt={4}
             fontWeight="extrabold"
@@ -76,7 +76,7 @@ const Banner: React.FC = () => {
         </Flex>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

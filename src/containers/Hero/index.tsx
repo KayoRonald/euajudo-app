@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 import {
   Box,
-  Container, chakra, Text, Stack, Flex, 
+  Container, chakra, Text, Stack, Flex,
 } from '@chakra-ui/react';
 // import help from '../../image/svg/undraw_medical_care_movn.svg'
-import Button from './Button/'
 import Lottie from 'react-lottie';
-import animationData from '../../json/animation/52176-covid.json'
+import Button from './Button/';
+import animationData2 from '../../json/animation/52176-covid.json';
 const Hero: React.FC = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: animationData2,
   };
   return (
     <Box as="section" bg="rgb(14, 15, 19)">
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
                   lineHeight="1.2"
                 >
                   Eu Ajudo
-              </chakra.h1>
+                </chakra.h1>
                 <Text
                   maxW="560px"
                   mx="auto"
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
                   mt="6"
                 >
                   Venha colaborar com a sua comunidadee!
-              </Text>
+                </Text>
               </Box>
               <Stack direction='column' spacing={4} mt={3}>
                 <Button />
@@ -73,17 +73,11 @@ const Hero: React.FC = () => {
               height={400}
               width={400}
             />
-            {/* <Image
-              src={help}
-              size="100%"
-              rounded="1rem"
-              shadow="2xl"
-            /> */}
           </Box>
         </Flex>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

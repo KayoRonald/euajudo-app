@@ -6,9 +6,9 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box, Container, Heading, Center,
-} from '@chakra-ui/react'
-import faqDate from '../../json/faq/faq.json'
-import { Circle, StrongText, SpanText } from './style'
+} from '@chakra-ui/react';
+import faqDate from '../../json/faq/faq.json';
+import { Circle, StrongText, SpanText } from './style';
 
 type AccordionProps = {
   id?: number;
@@ -33,7 +33,7 @@ const Accordion: React.FC<AccordionProps> = ({ id, header, body }) => {
               >
                 <Box flex="1" textAlign="left">
                   <StrongText>
-                    <SpanText >
+                    <SpanText>
                       0
                       <span style={{ color: '#04D361' }}>
                         {faq.id}
@@ -56,6 +56,7 @@ const Accordion: React.FC<AccordionProps> = ({ id, header, body }) => {
         ))}
       </ChakraAccordion>
     </Container>
-  )
-}
-export default Accordion
+  );
+};
+
+export default Accordion;

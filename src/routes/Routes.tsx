@@ -1,14 +1,12 @@
 import React from 'react';
 
-import { 
-  BrowserRouter, Switch, Route 
-} from 'react-router-dom';
-import * as ROUTES from '../constants/routes'; //todos os links estão dentro de 'constants'.
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import * as ROUTES from '../constants/routes';
 import {
-  Home, PageNotFound, About, Map, Team, Contact, CreatePoint
+  Home, PageNotFound, About, Map, Team, Contact, CreatePoint,
 } from '../pages';
 
-const AppRouter: React.FC = () => {
+export default function AppRouter() {
   return (
     <BrowserRouter>
         <Switch>
@@ -22,6 +20,4 @@ const AppRouter: React.FC = () => {
         </Switch>
     </BrowserRouter>
   );
-}
-
-export default AppRouter
+};

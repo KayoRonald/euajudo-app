@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const PageMap = styled.div`
     width: 100vw;
@@ -61,4 +61,4 @@ export const PageMap = styled.div`
  .map-popup .leaflet-popup-tip-container {
 	display: none;
 }
-`
+`;

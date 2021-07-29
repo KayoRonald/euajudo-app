@@ -6,7 +6,7 @@ import jumboData from '../../json/jumbo.json';
 type PropsJumbo = {
   id?: number;
   subTitle?: string;
-  image?: String;
+  image?: string;
   src?: string;
   alt?: string;
   direction?: string;
@@ -27,7 +27,7 @@ const Container: React.FC<PropsJumbo> = ({ id, subTitle, image, src, alt, direct
         </Jumbotron>
       ))}
     </Jumbotron.Container>
-  )
-}
+  );
+};
 
 export default Container;

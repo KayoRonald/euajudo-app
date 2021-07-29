@@ -1,6 +1,5 @@
-import React from 'react'
-import { Center, Container, Heading, Spinner, Box } from '@chakra-ui/react'
-
+import React from 'react';
+import { Center, Container, Heading, Spinner, Box } from '@chakra-ui/react';
 
 const SpinnerPage: React.FC = () => {
   return (
@@ -11,7 +10,6 @@ const SpinnerPage: React.FC = () => {
       alignItems="center"
       justifyContent="center"
       bg="#000"
-
     >
       <Box display="inline-block">
         <Heading
@@ -33,8 +31,7 @@ const SpinnerPage: React.FC = () => {
         </Center>
       </Box>
     </Container>
+  );
+};
 
-  )
-}
-
-export default SpinnerPage
+export default SpinnerPage;

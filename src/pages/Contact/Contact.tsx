@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
-import emailjs from 'emailjs-com'
+import React from 'react';
+import emailjs from 'emailjs-com';
 import {
   Flex,
   Box, FormControl, FormLabel,
-  Textarea, Button
+  Textarea, Button,
 } from '@chakra-ui/react';
 import swal from 'sweetalert';
 import {
   AiOutlineUserDelete,
   AiOutlineMail,
-  AiFillFileText
+  AiFillFileText,
 } from 'react-icons/ai';
 import Helmet from 'react-helmet';
 import Input from '../../components/Input/';
-import FormHeader from '../../components/FormHeader/'
+import FormHeader from '../../components/FormHeader/';
 
 const Contact: React.FC = () => {
   function sendEmail(event: any) {
@@ -21,15 +21,13 @@ const Contact: React.FC = () => {
     emailjs.sendForm('service_wsv412a', 'template_f93alnj', event.target, 'user_U7x2lQJjgnPqWvd7IP2WD')
       .then((result) => {
         swal("Bom trabalho!", "E-mail enviado com sucesso!", "success");
-        console.log("sucess" + result.text);
       }, (error) => {
         swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
-        console.log(error.text);
       });
-    event.target.reset()
+    event.target.reset();
   }
   return (
-    <Fragment>
+    <React.Fragment key="key">
       <Helmet title="Eu Ajudo | Contato" />
       <Flex
         id="anime"
@@ -41,7 +39,6 @@ const Contact: React.FC = () => {
         <Box
           as="form"
           onSubmit={sendEmail}
-
           backgroundColor="gray.700"
           px={4}
           width="94%"
@@ -58,9 +55,9 @@ const Contact: React.FC = () => {
           </Box>
         </Box>
       </Flex>
-    </Fragment>
-  )
-}
+    </React.Fragment>
+  );
+};
 
 const ContactForm = () => {
   return (
@@ -102,8 +99,8 @@ const ContactForm = () => {
       </FormControl>
       <ButtonSend />
     </Box>
-  )
-}
+  );
+};
 
 const ButtonSend = () => {
   return (
@@ -117,6 +114,7 @@ const ButtonSend = () => {
     >
       Enviar
     </Button>
-  )
-}
-export default Contact
+  );
+};
+
+export default Contact;

@@ -1,48 +1,45 @@
-import React from 'react'
+import React from 'react';
 import {
   AiOutlineUserDelete,
   AiFillFileText,
   AiFillPhone,
-  AiOutlineTeam
+  AiOutlineTeam,
 } from 'react-icons/ai';
-import { GrWaypoint, GrInfo } from 'react-icons/gr'
+import { GrWaypoint, GrInfo } from 'react-icons/gr';
 import {
   Box,
-  FormControl, FormLabel, Button, Alert, Text, SimpleGrid, Icon
+  FormControl, FormLabel, Button, Alert, Text, SimpleGrid, Icon,
 } from '@chakra-ui/react';
-import { LeafletMouseEvent } from "leaflet"
-import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet'
-import Input from '../../../components/Input/';
-import mapIcon from '../../../utils/'
+import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
-
+import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet';
+import Input from '../../../components/Input/';
+import mapIcon from '../../../utils/';
 
 const ContactForm: React.FC = () => {
-  const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 })
+  const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
   const [state, setState] = React.useState({
     long: 0,
-    lat: 0
-  })
+    lat: 0,
+  });
 
   React.useEffect(() => {
-    // Pegando a localização do usuario
-    navigator.geolocation.getCurrentPosition((posstion) =>{
-        setState({
-          long: posstion.coords.longitude,
-          lat: posstion.coords.latitude,
-        })
-      },(error) => {
-        swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
-        console.log(error)
-      },{
-        enableHighAccuracy: true,
-      }
-    )
-  }, [])
+    navigator.geolocation.getCurrentPosition((posstion) => {
+      setState({
+        long: posstion.coords.longitude,
+        lat: posstion.coords.latitude,
+      });
+    }, (error) => {
+      swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
+    }, {
+      enableHighAccuracy: true,
+      timeout: 60000,
+    });
+  }, []);
 
   function handleMapClick(event: LeafletMouseEvent) {
-    const { lat, lng } = event.latlng
-    setPosition({ latitude: lat, longitude: lng })
+    const { lat, lng } = event.latlng;
+    setPosition({ latitude: lat, longitude: lng });
   }
 
   return (
@@ -105,8 +102,8 @@ const ContactForm: React.FC = () => {
       </FormControl>
       <ButtonSend />
     </Box>
-  )
-}
+  );
+};
 
 export default ContactForm;
 
@@ -123,14 +120,14 @@ const ButtonSend = () => {
     >
       Enviar
     </Button>
-  )
-}
+  );
+};
 
 const AlertPoint = () => {
   return (
     <Alert status="info" mt={4} borderRadius={2}>
       <Icon as={GrInfo} />
       <Text paddingLeft={2} color="primary.200" fontWeight="bold">Escolhar um local no mapa</Text>
-    </Alert >
-  )
-}
+    </Alert>
+  );
+};

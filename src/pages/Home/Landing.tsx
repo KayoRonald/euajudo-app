@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import Helmet from 'react-helmet';
 import Container from '../../containers/Jumbotron/';
 import Hero from '../../containers/Hero/';
 import Accordion from '../../components/AccordionInfo/';
 import FooterContainer from '../../containers/Footer/';
-import Helmet from 'react-helmet';
-import Banner from '../../components/Banner/'
+import Banner from '../../components/Banner/';
 export default function Landing() {
   return (
-    <Fragment>
+    <React.Fragment key="key">
       <Helmet title="Eu Ajudo | Venha ajudar sua comunidade!" />
       <Hero />
       <Container />
       <Accordion />
-      <Banner/>
+      <Banner />
       <FooterContainer />
-    </Fragment>
+    </React.Fragment>
   );
 }

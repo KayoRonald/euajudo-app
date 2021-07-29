@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   Box, Container, chakra, Text, Heading,
-  Stack, SimpleGrid, Avatar
+  Stack, SimpleGrid, Avatar,
 } from '@chakra-ui/react';
 import { AiOutlineTeam } from 'react-icons/ai';
 import Helmet from 'react-helmet';
 import teamDate from '../../json/team/team.json';
-import FooterContainer from '../../containers/Footer/'
+import FooterContainer from '../../containers/Footer/';
 import * as ROUTES from '../../constants/routes';
-import NavBar from './NavBar/'
+import NavBar from './NavBar/';
+
 type TeamProps = {
   id: number;
   name: string;
@@ -17,13 +18,13 @@ type TeamProps = {
   background: string;
 }
 
-const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
+const Team: React.FC<TeamProps> = () => {
   return (
-    <Fragment>
-      <Helmet title="Eu Ajudo | Equipe" />
 
+    <React.Fragment key="key">
+      <Helmet title="Eu Ajudo | Equipe" />
       <Box mb="60px" as="section">
-        <NavBar/>
+        <NavBar />
         <Container py="80px" textAlign="center">
           <chakra.h1
             bgGradient="linear(to-l, #7928CA,#FF0080)"
@@ -38,7 +39,8 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
             Eu Ajudo
           </chakra.h1>
           <Text mx="auto" fontSize="lg">
-            App criado para intermediar pedidos durante isolamento social. O projeto 'Eu ajudo' é uma aplicação 
+            App criado para intermediar pedidos durante isolamento
+             social. O projeto 'Eu ajudo' é uma aplicação
             Web realizada para que os usuários colabore com sua comunidade.
           </Text>
         </Container>
@@ -48,7 +50,6 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
           <Stack spacing={8}>
             <Heading size="lg" display="inline-flex">
               Equipe Central
-              {' '}
               <AiOutlineTeam />
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} spacing="40px" pt="3">
@@ -90,7 +91,7 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
                     <Box justifyContent="center" alignItems="center">
                       <Text fontWeight="bold" fontSize="md">
                         Eu Ajudo, venha participar você também!
-                    </Text>
+                      </Text>
                     </Box>
                   </Stack>
                 </Stack>
@@ -100,8 +101,8 @@ const Team: React.FC<TeamProps> = ({ id, name, avatar, cargo, background }) => {
         </Container>
       </Box>
       <FooterContainer />
-    </Fragment>
-  )
-}
+    </React.Fragment>
+  );
+};
 
 export default Team;

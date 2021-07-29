@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import {
-  Heading
+  Heading,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
         </Link>
       </Header>
     </Hero>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

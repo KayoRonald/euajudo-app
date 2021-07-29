@@ -3,9 +3,9 @@ const styles = {
     body: {
       bg: '#000',
       color: 'white',
-      overflowX: 'hidden'
-    }
-  }
-}
+      overflowX: 'hidden',
+    },
+  },
+};
 
-export default styles
+export default styles;

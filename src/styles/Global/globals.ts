@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 * {
@@ -43,4 +43,4 @@ body::-webkit-scrollbar-thumb:hover {
   box-shadow: none !important;
   text-decoration: none !important;
 }
-`
+`;

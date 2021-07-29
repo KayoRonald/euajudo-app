@@ -17,8 +17,7 @@ export default function FooterContainer() {
       <Footer.Row>
         <Footer.Column>
           <Footer.Texto>
-            <Link to={ROUTES.HOME}
-              target="_blank">Ajuda/FAQ</Link>
+            <Link to={ROUTES.HOME} target="_blank">Ajuda/FAQ</Link>
           </Footer.Texto>
           <Footer.Texto>
             <ChakraLink href={ROUTES.APPGITHUB} isExternal>
@@ -70,7 +69,7 @@ export default function FooterContainer() {
       </Box>
     </Footer>
   );
-}
+};
 
 const FooterIcon = () => {
   return (
@@ -91,5 +90,5 @@ const FooterIcon = () => {
         <FaDiscord />
       </Circle>
     </Stack>
-  )
-}
+  );
+};
