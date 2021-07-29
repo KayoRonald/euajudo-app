@@ -46,7 +46,7 @@ Orientador</a>
       <a href="https://euajudo-app.vercel.app/">
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62349504?v=4" width="100px;" alt="Eu Ajudo"/>
         <br />
-        <sub><b>Gluaber</b>
+        <sub><b>Gluaber </b>
         </sub></a><br />
       <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">Back-end</a>
     </td>
