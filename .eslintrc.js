@@ -50,5 +50,8 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/no-children-prop": "off",
     "react/require-default-props": "off",
+    "comma-dangle": "off",
+    "padded-blocks": "off",
+    "no-shadow": "off",
   },
 };

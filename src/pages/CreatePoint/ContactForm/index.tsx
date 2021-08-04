@@ -13,39 +13,77 @@ import {
 import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet';
+import { useHistory } from 'react-router-dom';
 import Input from '../../../components/Input/';
 import mapIcon from '../../../utils/';
+import api from '../../../api/';
 
 const ContactForm: React.FC = () => {
+  const history = useHistory();
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
-  const [state, setState] = React.useState({
-    long: 0,
-    lat: 0,
-  });
-
-  React.useEffect(() => {
-    navigator.geolocation.getCurrentPosition((posstion) => {
-      setState({
-        long: posstion.coords.longitude,
-        lat: posstion.coords.latitude,
-      });
-    }, (error) => {
-      swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
-    }, {
-      enableHighAccuracy: true,
-      timeout: 60000,
-    });
-  }, []);
+  // const [state, setState] = React.useState({ long: 0, lat: 0, });
+  const [about, setAbout] = React.useState('');
+  const [whatsapp, setWhatsapp] = React.useState('');
+  const [namePoint, setNamePoint] = React.useState('');
+  const [responsible, setResponsible] = React.useState('');
 
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
     setPosition({ latitude: lat, longitude: lng });
   }
 
+  async function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    const { latitude, longitude } = position;
+    const data = new FormData();
+    data.append('latitude', String(latitude));
+    data.append('longitude', String(longitude));
+    data.append('namePoint', namePoint);
+    data.append('about', about);
+    data.append('whatsapp', whatsapp);
+    data.append('responsible', responsible);
+    try {
+      await api.post('/', data);
+      swal("Ops!", "Deu certo (:", "success");
+    } catch (error) {
+      swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
+    } finally {
+      setTimeout(() => {
+        history.push('/app');
+      }, 4000);
+    };
+  };
+
+  const [userPosition, setUserPosition] = React.useState({
+    latitude: 0,
+    longitude: 0,
+  });
+
+  navigator.geolocation.getCurrentPosition((position) => {
+    setUserPosition({
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+    });
+  });
+
+  // React.useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition((posstion) => {
+  //     setState({
+  //       long: posstion.coords.longitude,
+  //       lat: posstion.coords.latitude,
+  //     });
+  //   }, (error) => {
+  //     swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
+  //   }, {
+  //     enableHighAccuracy: true,
+  //     timeout: 60000,
+  //   });
+  // }, []);
+
   return (
-    <Box my={8} textAlign="left">
+    <Box my={8} textAlign="left" onSubmit={handleSubmit}>
       <MapContainer
-        center={[state.lat, state.long]}
+        center={[userPosition.latitude, userPosition.longitude]}
         zoom={15.7}
         style={
           { width: '100%', height: 280, borderRadius: 7 }
@@ -68,36 +106,40 @@ const ContactForm: React.FC = () => {
           <Input
             type="text"
             placeholder="Insira o seu nome"
-            name="name"
+            name="responsible"
             iconLeft={<AiOutlineUserDelete />}
+            onChange={(e) => setResponsible(e.target.value)}
           />
         </FormControl>
         <FormControl id="descricao" mt={1}>
           <FormLabel>Número para contato:</FormLabel>
           <Input
             type="text"
-            name="contactNumber"
+            name="whatsapp"
             placeholder="Número de contato"
+            onChange={(e) => setWhatsapp(e.target.value)}
             iconLeft={<AiFillPhone />}
           />
         </FormControl>
       </SimpleGrid>
-      <FormControl id="email" mt={2}>
+      <FormControl id="pointName" mt={2}>
         <FormLabel>Nome do local:</FormLabel>
         <Input
           type="text"
           name="pointName"
           placeholder="Insira o seu ponto"
           iconLeft={<AiOutlineTeam />}
+          onChange={(e) => setNamePoint(e.target.value)}
         />
       </FormControl>
       <FormControl id="descricao" mt={2}>
         <FormLabel>Descrição:</FormLabel>
         <Input
           type="text"
-          name="description"
+          name="about"
           placeholder="Insira a sua descrição"
           iconLeft={<AiFillFileText />}
+          onChange={(e) => setAbout(e.target.value)}
         />
       </FormControl>
       <ButtonSend />

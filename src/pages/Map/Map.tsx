@@ -54,6 +54,18 @@ function MapHelp() {
             </Link>
           </Popup>
         </Marker>
+
+        <Marker
+          icon={mapIcon}
+          position={[-6.4419317, -36.4511404]}
+        >
+          <Popup minWidth={240} maxHeight={240} className="map-popup" closeButton={false}>
+            Ponto de Vacina
+            <Link to="/">
+              <FiArrowRight size={32} color="#FFF" />
+            </Link>
+          </Popup>
+        </Marker>
       </MapContainer>
 
       <Link to={ROUTES.CREATEPOINT} className="create-vaccination-point">
