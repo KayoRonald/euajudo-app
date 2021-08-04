@@ -18,7 +18,6 @@ const CreatePont: React.FC = () => {
         justifyContent="center"
       >
         <Box
-          as="form"
           backgroundColor="gray.700"
           px={4}
           width="94%"

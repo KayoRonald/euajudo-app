@@ -34,6 +34,7 @@ const ContactForm: React.FC = () => {
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
+    // console.log('event');
     const { latitude, longitude } = position;
     const data = new FormData();
     data.append('latitude', String(latitude));
@@ -42,11 +43,12 @@ const ContactForm: React.FC = () => {
     data.append('about', about);
     data.append('whatsapp', whatsapp);
     data.append('responsible', responsible);
+    console.log(data);
     try {
       await api.post('/', data);
       swal("Ops!", "Deu certo (:", "success");
     } catch (error) {
-      swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
+      swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
     } finally {
       setTimeout(() => {
         history.push('/app');
@@ -81,7 +83,7 @@ const ContactForm: React.FC = () => {
   // }, []);
 
   return (
-    <Box my={8} textAlign="left" onSubmit={handleSubmit}>
+    <Box my={8} textAlign="left" onSubmit={handleSubmit} as="form">
       <MapContainer
         center={[userPosition.latitude, userPosition.longitude]}
         zoom={15.7}
