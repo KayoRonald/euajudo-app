@@ -25,36 +25,12 @@ const ContactForm: React.FC = () => {
   const [about, setAbout] = React.useState('');
   const [whatsapp, setWhatsapp] = React.useState('');
   const [namePoint, setNamePoint] = React.useState('');
-  const [responsible, setResponsible] = React.useState('');
+  const [responsibleName, setResponsible] = React.useState('');
 
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
     setPosition({ latitude: lat, longitude: lng });
   }
-
-  async function handleSubmit(event: React.FormEvent) {
-    event.preventDefault();
-    // console.log('event');
-    const { latitude, longitude } = position;
-    const data = new FormData();
-    data.append('latitude', String(latitude));
-    data.append('longitude', String(longitude));
-    data.append('namePoint', namePoint);
-    data.append('about', about);
-    data.append('whatsapp', whatsapp);
-    data.append('responsible', responsible);
-    try {
-      await api.post('/', data);
-      swal("Ops!", "Deu certo (:", "success");
-    } catch (error) {
-      swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
-    } finally {
-      setTimeout(() => {
-        history.push('/app');
-      }, 4000);
-    };
-  };
-
   const [userPosition, setUserPosition] = React.useState({
     latitude: 0,
     longitude: 0,
@@ -66,20 +42,35 @@ const ContactForm: React.FC = () => {
       longitude: position.coords.longitude,
     });
   });
-
-  // React.useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition((posstion) => {
-  //     setState({
-  //       long: posstion.coords.longitude,
-  //       lat: posstion.coords.latitude,
-  //     });
-  //   }, (error) => {
-  //     swal("Ops!", "Precisamos da sua permissão para encontrar sua localização:(", "error");
-  //   }, {
-  //     enableHighAccuracy: true,
-  //     timeout: 60000,
-  //   });
-  // }, []);
+  async function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    const { latitude, longitude } = position;
+    // const data = new FormData();
+    // data.append('latitude', String(latitude));
+    // data.append('longitude', String(longitude));
+    // data.append('namePoint', namePoint);
+    // data.append('about', about);
+    // data.append('whatsapp', whatsapp);
+    // data.append('responsible', responsible);
+    const data = {
+      namePoint,
+      latitude,
+      longitude,
+      about,
+      whatsapp,
+      responsibleName,
+    };
+    try {
+      await api.post('/', data);
+      swal("Ops!", "Deu certo (:", "success");
+    } catch (error) {
+      swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
+    } finally {
+      setTimeout(() => {
+        history.push('/app');
+      }, 4000);
+    };
+  };
 
   return (
     <Box my={8} textAlign="left" onSubmit={handleSubmit} as="form">
