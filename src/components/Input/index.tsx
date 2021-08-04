@@ -6,18 +6,17 @@ import {
   InputLeftElement,
 } from '@chakra-ui/react';
 
-interface InputPropsApp extends InputProps {
+type InputPropsApp = InputProps &{
   placeholder?: string;
   type?: string;
   iconLeft?: JSX.Element;
   name?: string;
 }
+
 const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type, name, ...props }) => {
   const [focus, setFocus] = React.useState<boolean>(false);
   return (
-    <InputGroup
-      {...props}
-    >
+    <InputGroup>
       <InputLeftElement
         width="3rem"
         height="100%"
@@ -34,6 +33,7 @@ const Input: React.FC<InputPropsApp> = ({ iconLeft, placeholder, type, name, ...
         backgroundColor="gray.800"
         onFocus={(): void => setFocus(true)}
         rounded="lg"
+        {...props}
       />
     </InputGroup>
   );
