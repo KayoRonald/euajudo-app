@@ -58,7 +58,7 @@ Orientador</a>
 <br/>
 <hr/>
 
-### Aviso
+# Aviso
 Quando for executar o código, possivelmente o tsconfig vai ser gerado novamente. Assim, ele vai sobrescrever uma linha, como o exemplo demostra:
 Código atual
 > "jsx": "react"
