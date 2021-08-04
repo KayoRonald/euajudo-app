@@ -43,7 +43,6 @@ const ContactForm: React.FC = () => {
     data.append('about', about);
     data.append('whatsapp', whatsapp);
     data.append('responsible', responsible);
-    console.log(data);
     try {
       await api.post('/', data);
       swal("Ops!", "Deu certo (:", "success");
