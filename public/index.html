@@ -25,7 +25,30 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>
+    <style>
+    body{
+      overflow-y: hidden;
+      font-family: Helvetica, sans-serif;
+      background-color: #0F1419;
+      color: #fff;
+    }
+    .errorContainer{
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 21% 0;
+      font-size: 16px;
+    }
+    </style>
+    <div class="errorContainer">
+      <img width="80px" height="80px"
+           src="%PUBLIC_URL%/favicon.ico" alt="Eu Ajudo" />
+      <h1>O JavaScript não está disponível. :(</h1>
+      <p>Detectamos que o JavaScript está desabilitado neste navegador. Mude para um navegador compatível para
+         continuar usando o nosso site.
+      </p>
+    </div>
+  </noscript>
   <div id="root"></div>
 </body>
 
