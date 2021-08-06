@@ -8,7 +8,7 @@ import {
 import { GrWaypoint, GrInfo } from 'react-icons/gr';
 import {
   Box,
-  FormControl, FormLabel, Button, Alert, Text, SimpleGrid, Icon,
+  FormControl, FormLabel, Button, Alert, Text, SimpleGrid, Icon, Select,
 } from '@chakra-ui/react';
 import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
@@ -114,16 +114,25 @@ const ContactForm: React.FC = () => {
           />
         </FormControl>
       </SimpleGrid>
-      <FormControl id="pointName" mt={2}>
-        <FormLabel>Nome do local:</FormLabel>
-        <Input
-          type="text"
-          name="pointName"
-          placeholder="Insira o seu ponto"
-          iconLeft={<AiOutlineTeam />}
-          onChange={(e) => setNamePoint(e.target.value)}
-        />
-      </FormControl>
+      <SimpleGrid columns={[1, 1, 2]} spacing={2}>
+        <FormControl id="pointName" mt={2}>
+          <FormLabel>Nome do local:</FormLabel>
+          <Input
+            type="text"
+            name="pointName"
+            placeholder="Insira o seu ponto"
+            iconLeft={<AiOutlineTeam />}
+            onChange={(e) => setNamePoint(e.target.value)}
+          />
+        </FormControl>
+        <FormControl id="pointName" mt={2}>
+          <FormLabel>É um ponto de vacinação?</FormLabel>
+          <Select placeholder="Selecione uma opção">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+          </Select>
+        </FormControl>
+      </SimpleGrid>
       <FormControl id="descricao" mt={2}>
         <FormLabel>Descrição:</FormLabel>
         <Input
