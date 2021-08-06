@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Flex, Heading, SimpleGrid, Stack, Text, Image, Center, HStack } from '@chakra-ui/react';
 import { AiFillGithub } from 'react-icons/ai';
 import bannerImg from '../../image/undraw_version.svg';
+import * as ROUTES from '../../constants/routes';
 const Banner: React.FC = () => {
   return (
     <Box as="section" bg="#0e0f13" color="white" overflow="hidden" mt={5}>
@@ -62,7 +63,7 @@ const Banner: React.FC = () => {
             rounded="md"
             px="8"
             py="3"
-            href="/"
+            href={ROUTES.APPGITHUB}
             color="white"
             fontSize="lg"
             fontWeight="semibold"
