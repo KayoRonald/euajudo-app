@@ -17,16 +17,16 @@ import { useHistory } from 'react-router-dom';
 import Input from '../../../components/Input/';
 import mapIcon from '../../../utils/';
 import api from '../../../api/';
+import * as ROUTES from '../../../constants/routes';
 
 const ContactForm: React.FC = () => {
   const history = useHistory();
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
-  // const [state, setState] = React.useState({ long: 0, lat: 0, });
   const [about, setAbout] = React.useState('');
   const [whatsapp, setWhatsapp] = React.useState('');
   const [namePoint, setNamePoint] = React.useState('');
   const [responsibleName, setResponsible] = React.useState('');
-
+  const [typePoint, setTypePoint] = React.useState('');
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
     setPosition({ latitude: lat, longitude: lng });
@@ -51,7 +51,8 @@ const ContactForm: React.FC = () => {
     // data.append('namePoint', namePoint);
     // data.append('about', about);
     // data.append('whatsapp', whatsapp);
-    // data.append('responsible', responsible);
+    // data.append('responsibleName', responsibleName);
+    // data.append('typePoint', typePoint);
     const data = {
       namePoint,
       latitude,
@@ -59,6 +60,7 @@ const ContactForm: React.FC = () => {
       about,
       whatsapp,
       responsibleName,
+      typePoint,
     };
     try {
       await api.post('/', data);
@@ -67,7 +69,7 @@ const ContactForm: React.FC = () => {
       swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
     } finally {
       setTimeout(() => {
-        history.push('/app');
+        history.push(ROUTES.APPMAP);
       }, 4000);
     };
   };
@@ -125,9 +127,9 @@ const ContactForm: React.FC = () => {
             onChange={(e) => setNamePoint(e.target.value)}
           />
         </FormControl>
-        <FormControl id="pointName" mt={2}>
+        <FormControl id="typePoint" mt={2}>
           <FormLabel>É um ponto de vacinação?</FormLabel>
-          <Select placeholder="Selecione uma opção">
+          <Select placeholder="Selecione uma opção" required onChange={(e) => setTypePoint(e.target.value)}>
             <option value="sim">Sim</option>
             <option value="não">Não</option>
           </Select>
