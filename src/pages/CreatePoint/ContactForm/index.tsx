@@ -46,14 +46,6 @@ const ContactForm: React.FC = () => {
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     const { latitude, longitude } = position;
-    // const data = new FormData();
-    // data.append('latitude', String(latitude));
-    // data.append('longitude', String(longitude));
-    // data.append('namePoint', namePoint);
-    // data.append('about', about);
-    // data.append('whatsapp', whatsapp);
-    // data.append('responsibleName', responsibleName);
-    // data.append('typePoint', typePoint);
     const data = {
       namePoint,
       latitude,
@@ -65,8 +57,8 @@ const ContactForm: React.FC = () => {
     };
     try {
       setLoading(true);
-      await api.post('/', data);
-      swal("Ops!", "Deu certo (:", "success");
+      await api.post('/registionPoint', data);
+      swal("Cadastro Realizado!", "Deu certo (:", "success");
     } catch (error) {
       swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
     } finally {
