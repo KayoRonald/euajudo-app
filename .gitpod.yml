@@ -15,3 +15,10 @@ tasks:
 ports:
   - port: 3000
     onOpen: open-browser
+    visibility: public
+
+github:
+  prebuilds:
+    master: true
+    pullRequestsFromForks: true
+    addLabel:  prebuilt-in-gitpod
