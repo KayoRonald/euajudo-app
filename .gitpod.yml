@@ -2,12 +2,16 @@
   # file: .gitpod.Dockerfile
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
-ports:
-  - port: 3000
-    onOpen: open-preview
+image:
+  file: .gitpod.Dockerfile
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - command: sudo docker-up
-  - init: npm install --save # runs during prebuild
-    command: npm start
+  - init: wget https://github.com/jeromewu/docker-workspace/raw/master/vim.zip -O /tmp/vim.zip &> /dev/null && unzip /tmp/vim.zip -d /home/gitpod &> /dev/null
+  - init: yarn install # runs during prebuild
+    command: yarn start
+
+ports:
+  - port: 3000
+    onOpen: open-browser
