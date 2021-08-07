@@ -46,18 +46,6 @@ export const PageMap = styled.div`
 	justify-content: space-between;
 	margin: 8px 12px;
 }
-/* 
- .map-popup .leaflet-popup-content span {
-	align-items: center;
-	background-color: #15c3d6;
-	border-radius: 12px;
-	box-shadow: 17px 27px 41px #178ea633;
-	display: flex;
-	height: 40px !important;
-	justify-content: center;
-	width: 40px;
-} */
-
  .map-popup .leaflet-popup-tip-container {
 	display: none;
 }
