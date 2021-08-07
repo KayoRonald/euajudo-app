@@ -5,10 +5,10 @@ import {
   AiFillPhone,
   AiOutlineTeam,
 } from 'react-icons/ai';
-import { GrWaypoint, GrInfo } from 'react-icons/gr';
+import { GrInfo } from 'react-icons/gr';
 import {
   Box,
-  FormControl, FormLabel, Button, Alert, Text, SimpleGrid, Icon, Select,
+  FormControl, FormLabel, Alert, Text, SimpleGrid, Icon, Select,
 } from '@chakra-ui/react';
 import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
@@ -18,7 +18,7 @@ import Input from '../../../components/Input/';
 import mapIcon from '../../../utils/';
 import api from '../../../api/';
 import * as ROUTES from '../../../constants/routes';
-
+import Button from '../ButtonSend/';
 const ContactForm: React.FC = () => {
   const history = useHistory();
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
@@ -27,6 +27,7 @@ const ContactForm: React.FC = () => {
   const [namePoint, setNamePoint] = React.useState('');
   const [responsibleName, setResponsible] = React.useState('');
   const [typePoint, setTypePoint] = React.useState('');
+  const [loading, setLoading] = React.useState<boolean>(false);
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
     setPosition({ latitude: lat, longitude: lng });
@@ -63,11 +64,13 @@ const ContactForm: React.FC = () => {
       typePoint,
     };
     try {
+      setLoading(true);
       await api.post('/', data);
       swal("Ops!", "Deu certo (:", "success");
     } catch (error) {
       swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
     } finally {
+      setLoading(false);
       setTimeout(() => {
         history.push(ROUTES.APPMAP);
       }, 4000);
@@ -145,28 +148,12 @@ const ContactForm: React.FC = () => {
           onChange={(e) => setAbout(e.target.value)}
         />
       </FormControl>
-      <ButtonSend />
+      <Button loading={loading} />
     </Box>
   );
 };
 
 export default ContactForm;
-
-const ButtonSend = () => {
-  return (
-    <Button
-      type="submit"
-      width="full"
-      mt={4}
-      outline="none"
-      _hover={{ backgroundColor: 'purple.600' }}
-      backgroundColor="purple.500"
-      leftIcon={<GrWaypoint />}
-    >
-      Enviar
-    </Button>
-  );
-};
 
 const AlertPoint = () => {
   return (
