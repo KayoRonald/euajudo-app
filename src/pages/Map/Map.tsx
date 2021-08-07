@@ -138,7 +138,7 @@ const ModalInformation: React.FC<Props> = ({
           </ModalFooter>
           <Divider />
           <ModalFooter justifyContent="center">
-            <Text>Cadastrado por: {responsibleName}</Text>
+            <Text>Cadastrado por:</Text> <Text marginLeft={2} isTruncated>{responsibleName}</Text>
           </ModalFooter>
         </ModalContent>
       </Modal>
