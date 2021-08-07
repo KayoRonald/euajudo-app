@@ -29,7 +29,7 @@ type RegistionProps = {
   whatsapp: string;
 }
 
-function MapHelp() {
+const MapHelp: React.FC = () => {
   const [state, setState] = React.useState({
     long: 0,
     lat: 0,
@@ -75,7 +75,7 @@ function MapHelp() {
             >
               <Popup minWidth={240} maxHeight={40} className="map-popup" closeButton={false}>
                 <Text isTruncated margin={1}>{registion.namePoint}</Text>
-                <CustomModal
+                <ModalInformation
                   showModalButtonText="Edit"
                   modalHeader={registion.namePoint}
                   modalBody="Edit Modal"
@@ -90,16 +90,17 @@ function MapHelp() {
       </Link>
     </PageMap>
   );
-}
+};
 
 export default MapHelp;
+
 type Props = {
   showModalButtonText: string;
   modalHeader: string;
   modalBody: string;
-}
+};
 
-const CustomModal: React.FC<Props> = ({ showModalButtonText, modalHeader, modalBody }) => {
+const ModalInformation: React.FC<Props> = ({ showModalButtonText, modalHeader, modalBody }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
