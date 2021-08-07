@@ -90,7 +90,8 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 > - **[Styled Components](https://styled-components.com/)**
 >  
 > - **[TypeScript](https://www.typescriptlang.org/)**
-
+>
+> - **[Docker]()**
 <br/>
 
 **1. Faça um clone do repositório:**
@@ -117,6 +118,11 @@ yarn
 ```bash
 npm install
 ```
+
+# Docker
+docker build -t euajudo:dev .
+
+docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm euajudo:dev
 
 **4. Como rodar o projeto**
 
