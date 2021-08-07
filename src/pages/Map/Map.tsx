@@ -12,6 +12,7 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Divider,
   Button
 } from '@chakra-ui/react';
 import Helmet from 'react-helmet';
@@ -22,11 +23,14 @@ import { PageMap } from './styles';
 import api from '../../api/';
 
 type RegistionProps = {
+  id: number;
   namePoint: string;
   latitude: number;
   longitude: number;
   about: string;
   whatsapp: string;
+  responsibleName: string;
+  typePoint: string;
 }
 
 const MapHelp: React.FC = () => {
@@ -72,13 +76,16 @@ const MapHelp: React.FC = () => {
             <Marker
               icon={mapIcon}
               position={[registion.latitude, registion.longitude]}
+              key={registion.id}
             >
               <Popup minWidth={240} maxHeight={40} className="map-popup" closeButton={false}>
                 <Text isTruncated margin={1}>{registion.namePoint}</Text>
                 <ModalInformation
-                  showModalButtonText="Edit"
-                  modalHeader={registion.namePoint}
-                  modalBody="Edit Modal"
+                  namePoint={registion.namePoint}
+                  about={registion.about}
+                  whatsapp={registion.whatsapp}
+                  responsibleName={registion.responsibleName}
+                  typePoint={registion.typePoint}
                 />
               </Popup>
             </Marker>
@@ -95,29 +102,43 @@ const MapHelp: React.FC = () => {
 export default MapHelp;
 
 type Props = {
-  showModalButtonText: string;
-  modalHeader: string;
-  modalBody: string;
+  namePoint: string;
+  about: string;
+  whatsapp: string;
+  responsibleName: string;
+  typePoint: string;
 };
 
-const ModalInformation: React.FC<Props> = ({ showModalButtonText, modalHeader, modalBody }) => {
+const ModalInformation: React.FC<Props> = ({
+  namePoint, about, whatsapp, responsibleName, typePoint,
+}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
       <Button colorScheme="red" onClick={onOpen} rightIcon={<FiArrowRight />}>
-        {showModalButtonText}
+        Abrir
       </Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{modalHeader}</ModalHeader>
+          <ModalHeader>{namePoint}</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>{modalBody}</ModalBody>
+          <ModalBody>
+            Sobre
+            <Text>{about}</Text>
+            <Text>whatsapp: {whatsapp}</Text>
+            <Text>{about}</Text>
+            <Text>È um Ponto de vacinação? {typePoint}</Text>
+          </ModalBody>
           <ModalFooter>
             <Button variant="ghost" mr={3} onClick={onClose}>
               Cancel
             </Button>
+          </ModalFooter>
+          <Divider />
+          <ModalFooter justifyContent="center">
+            <Text>Cadastrado por: {responsibleName}</Text>
           </ModalFooter>
         </ModalContent>
       </Modal>
