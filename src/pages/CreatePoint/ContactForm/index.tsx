@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
     setPosition({ latitude: lat, longitude: lng });
-  }
+  };
   const [userPosition, setUserPosition] = React.useState({
     latitude: 0,
     longitude: 0,
@@ -56,11 +56,11 @@ const ContactForm: React.FC = () => {
       typePoint,
     };
     if (latitude === 0 && longitude === 0) {
-      swal("Ops!", "Selecione um local no mapa :(", "error");
+      swal("Calma lá", "Selecione um local no mapa :(", "error");
     } else {
       try {
         setLoading(true);
-        await api.post('/', data);
+        await api.post('registionPoint', data);
         swal("Cadastro Realizado!", "Deu certo (:", "success");
       } catch (error) {
         swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
