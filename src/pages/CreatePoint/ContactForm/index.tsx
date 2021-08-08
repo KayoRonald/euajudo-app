@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
     } else {
       try {
         setLoading(true);
-        await api.post('registionPoint/', data);
+        await api.post('/', data);
         swal("Cadastro Realizado!", "Deu certo (:", "success");
       } catch (error) {
         swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
