@@ -5,10 +5,9 @@ import {
   AiFillPhone,
   AiOutlineTeam,
 } from 'react-icons/ai';
-import { GrInfo } from 'react-icons/gr';
+
 import {
-  Box,
-  FormControl, FormLabel, Alert, Text, SimpleGrid, Icon, Select,
+  Box, SimpleGrid, Select
 } from '@chakra-ui/react';
 import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
@@ -19,6 +18,8 @@ import mapIcon from '../../../utils/';
 import api from '../../../api/';
 import * as ROUTES from '../../../constants/routes';
 import Button from '../ButtonSend/';
+import AlertPoint from '../../../components/AlertPoint';
+import FormControl from '../../../components/FormControl';
 const ContactForm: React.FC = () => {
   const history = useHistory();
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
@@ -61,7 +62,7 @@ const ContactForm: React.FC = () => {
       try {
         setLoading(true);
         await api.post('/registionPoint/', data);
-        swal("Cadastro Realizado!", "Deu certo (:", "success");
+        swal("Cadastro Realizado!", "Obrigado por contribuir!", "success");
       } catch (error) {
         swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
       } finally {
@@ -94,8 +95,7 @@ const ContactForm: React.FC = () => {
       </MapContainer>
       <AlertPoint />
       <SimpleGrid columns={[1, 1, 2]} spacing={2}>
-        <FormControl id="nome" mt={1}>
-          <FormLabel>Nome:</FormLabel>
+        <FormControl id="nome" mt={1} name="Nome">
           <Input
             type="text"
             placeholder="Insira o seu nome"
@@ -104,8 +104,7 @@ const ContactForm: React.FC = () => {
             onChange={(e) => setResponsible(e.target.value)}
           />
         </FormControl>
-        <FormControl id="descricao" mt={1}>
-          <FormLabel>Número para contato:</FormLabel>
+        <FormControl id="descricao" mt={1} name="Número para contato:">
           <Input
             type="text"
             name="whatsapp"
@@ -116,8 +115,7 @@ const ContactForm: React.FC = () => {
         </FormControl>
       </SimpleGrid>
       <SimpleGrid columns={[1, 1, 2]} spacing={2}>
-        <FormControl id="pointName" mt={2}>
-          <FormLabel>Nome do local:</FormLabel>
+        <FormControl id="pointName" mt={2} name="Nome do local">
           <Input
             type="text"
             name="pointName"
@@ -126,16 +124,14 @@ const ContactForm: React.FC = () => {
             onChange={(e) => setNamePoint(e.target.value)}
           />
         </FormControl>
-        <FormControl id="typePoint" mt={2}>
-          <FormLabel>É um ponto de vacinação?</FormLabel>
+        <FormControl id="typePoint" mt={2} name="É um ponto de vacinação?">
           <Select placeholder="Selecione uma opção" required onChange={(e) => setTypePoint(e.target.value)}>
             <option value="sim">Sim</option>
             <option value="não">Não</option>
           </Select>
         </FormControl>
       </SimpleGrid>
-      <FormControl id="descricao" mt={2}>
-        <FormLabel>Descrição:</FormLabel>
+      <FormControl id="descricao" mt={2} name="Descrição">
         <Input
           type="text"
           name="about"
@@ -150,12 +146,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-
-const AlertPoint = () => {
-  return (
-    <Alert status="info" mt={4} borderRadius={2}>
-      <Icon as={GrInfo} />
-      <Text paddingLeft={2} color="primary.200" fontWeight="bold">Escolhar um local no mapa</Text>
-    </Alert>
-  );
-};

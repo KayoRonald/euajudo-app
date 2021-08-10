@@ -4,16 +4,7 @@ import swal from 'sweetalert';
 import { FiPlus, FiArrowRight } from 'react-icons/fi';
 import { Map as MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import {
-  Text, Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Divider,
-  Button
+  Text
 } from '@chakra-ui/react';
 import Helmet from 'react-helmet';
 
@@ -21,6 +12,7 @@ import mapIcon from '../../utils/';
 import * as ROUTES from '../../constants/routes';
 import { PageMap } from './styles';
 import api from '../../api/';
+import Modal from '../../components/Modal';
 
 type RegistionProps = {
   id: number;
@@ -80,7 +72,7 @@ const MapHelp: React.FC = () => {
             >
               <Popup minWidth={240} maxHeight={40} className="map-popup" closeButton={false}>
                 <Text isTruncated margin={1}>{registion.namePoint}</Text>
-                <ModalInformation
+                <Modal
                   namePoint={registion.namePoint}
                   about={registion.about}
                   whatsapp={registion.whatsapp}
@@ -100,48 +92,3 @@ const MapHelp: React.FC = () => {
 };
 
 export default MapHelp;
-
-type Props = {
-  namePoint: string;
-  about: string;
-  whatsapp: string;
-  responsibleName: string;
-  typePoint: string;
-};
-
-const ModalInformation: React.FC<Props> = ({
-  namePoint, about, whatsapp, responsibleName, typePoint,
-}) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  return (
-    <>
-      <Button colorScheme="red" onClick={onOpen} rightIcon={<FiArrowRight />}>
-        Abrir
-      </Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{namePoint}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Sobre
-            <Text>{about}</Text>
-            <Text>whatsapp: {whatsapp}</Text>
-            <Text>{about}</Text>
-            <Text>È um Ponto de vacinação? {typePoint}</Text>
-          </ModalBody>
-          <ModalFooter>
-            <Button variant="ghost" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-          </ModalFooter>
-          <Divider />
-          <ModalFooter justifyContent="center">
-            <Text>Cadastrado por:</Text> <Text marginLeft={2} isTruncated>{responsibleName}</Text>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </>
-  );
-};
