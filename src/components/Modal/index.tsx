@@ -33,7 +33,6 @@ const Modal: React.FC<ModalProps> = ({
             Sobre
             <Text>{about}</Text>
             <Text>whatsapp: {whatsapp}</Text>
-            <Text>{about}</Text>
             <Text>È um Ponto de vacinação? {typePoint}</Text>
           </ModalBody>
           <ModalFooter>
