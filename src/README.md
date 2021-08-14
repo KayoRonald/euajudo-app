@@ -23,7 +23,7 @@ yarn create react-app my-app --template typescript
 
 ### Explicação sobre o tsx
 
-Em boa parte de nosso projeto, vai ser visto a abreviação tsx em alguns arquivos, principalmente aqueles que possuem códigos com html. TSX é a versão TypeScript do JSX (JavaScript e XML) que permitem embutir XML (ou estritamente falando em nosso uso de XHTML) , TypeScript é um superconjunto que adiciona tipagem estática em JavaScript. 
+Em boa parte de nosso projeto, vai ser visto a abreviação tsx em alguns arquivos, principalmente aqueles que possuem códigos com html. TSX é a versão TypeScript do JSX (JavaScript e XML) que permitem embutir XML (ou estritamente falando em nosso uso de XHTML). 
 
 ### App.tsx(ou App.jsx)
 O arquivo App.tsx(ou App.jsx), é onde vamos separar as responsabilidades entre os arquivo, para manter uma certa organização, ficando responsável por receber as configurações de nosso tema. 
