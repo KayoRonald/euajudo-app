@@ -9,7 +9,7 @@ export default function Jumbotron({ children, direction = 'row', ...restProps })
       <Inner direction={direction}>{children}</Inner>
     </Item>
   );
-}
+};
 
 Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
