@@ -3,10 +3,10 @@ import React from 'react';
 import {
   Text, Modal as ChakraModal, ModalOverlay,
   ModalContent, ModalHeader, ModalFooter, ModalBody,
-  ModalCloseButton, useDisclosure, Divider, Button
+  ModalCloseButton, useDisclosure, Divider, Button, Box
 } from '@chakra-ui/react';
+import { FiArrowRight, FiMessageSquare } from 'react-icons/fi';
 
-import { FiArrowRight } from 'react-icons/fi';
 type ModalProps = {
   namePoint: string;
   about: string;
@@ -14,7 +14,6 @@ type ModalProps = {
   responsibleName: string;
   typePoint: string;
 };
-
 const Modal: React.FC<ModalProps> = ({
   namePoint, about, whatsapp, responsibleName, typePoint
 }) => {
@@ -30,12 +29,19 @@ const Modal: React.FC<ModalProps> = ({
           <ModalHeader>{namePoint}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Sobre
-            <Text>{about}</Text>
-            <Text>whatsapp: {whatsapp}</Text>
+            Sobre:
+            <Box px={4} color="white">
+              <Text>{about}</Text>
+            </Box>
             <Text>È um Ponto de vacinação? {typePoint}</Text>
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter justifyContent="space-around">
+            <Button
+              as="a" href={`https://api.whatsapp.com/send?phone=${whatsapp}`} target="_blank"
+              rightIcon={<FiMessageSquare />} colorScheme="blue" variant="outline"
+            >
+              whatsapp
+            </Button>
             <Button variant="ghost" mr={3} onClick={onClose}>
               Cancel
             </Button>
@@ -52,5 +58,4 @@ const Modal: React.FC<ModalProps> = ({
     </React.Fragment>
   );
 };
-
 export default Modal;

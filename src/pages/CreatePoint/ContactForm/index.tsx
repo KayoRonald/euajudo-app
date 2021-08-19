@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
       longitude: position.coords.longitude,
     });
   });
-  async function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent): Promise<void> {
     event.preventDefault();
     const { latitude, longitude } = position;
     const data = {
