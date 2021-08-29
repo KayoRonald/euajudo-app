@@ -55,14 +55,17 @@ const ContactForm: React.FC = () => {
       typePoint,
     };
     if (latitude === 0 && longitude === 0) {
-      swal("Calma lá", "Selecione um local no mapa :(", "error");
+      swal("Calma lá", "Selecione um local no mapa", "error");
     } else {
       try {
         setLoading(true);
         await api.post('/registionPoint/', data);
-        swal("Cadastro Realizado!", "Obrigado por contribuir!", "success");
+        swal(`Cadastro Realizado!`,
+          `O seu ponto ${Number(namePoint) >= 6 ? namePoint : namePoint.substring(1, namePoint.length)}`
+          + `..., foi cadastrado`, "success");
       } catch (error) {
-        swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
+        swal("Ops!", `${Number(namePoint) >= 6 ? namePoint : namePoint.substring(1, namePoint.length)}`
+          + `...`, "error");
       } finally {
         setLoading(false);
         setTimeout(() => {
