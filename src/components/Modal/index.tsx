@@ -50,7 +50,7 @@ const Modal: React.FC<ModalProps> = ({
           <ModalFooter justifyContent="center">
             <Text>Cadastrado por:</Text>
             <Text marginLeft={2} isTruncated>
-              {responsibleName.toLowerCase()}
+              {responsibleName[0].toLocaleUpperCase()+responsibleName.substring(1, responsibleName.length)}
             </Text>
           </ModalFooter>
         </ModalContent>
