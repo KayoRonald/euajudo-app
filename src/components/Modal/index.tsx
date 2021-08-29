@@ -1,4 +1,5 @@
 /* eslint no-trailing-spaces: "off" */
+
 import React from 'react';
 import {
   Text, Modal as ChakraModal, ModalOverlay,
@@ -50,7 +51,10 @@ const Modal: React.FC<ModalProps> = ({
           <ModalFooter justifyContent="center">
             <Text>Cadastrado por:</Text>
             <Text marginLeft={2} isTruncated>
-              {responsibleName[0].toLocaleUpperCase()+responsibleName.substring(1, responsibleName.length)}
+              {
+                responsibleName[0].toLocaleUpperCase()
+                + responsibleName.substring(1, responsibleName.length)
+              }
             </Text>
           </ModalFooter>
         </ModalContent>
