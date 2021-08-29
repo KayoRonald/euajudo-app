@@ -12,9 +12,7 @@ import {
   AiFillFileText,
 } from 'react-icons/ai';
 import Helmet from 'react-helmet';
-import Input from '../../components/Input/';
-import FormHeader from '../../components/FormHeader/';
-
+import { Input, FormHeader } from '../../components';
 const Contact: React.FC = () => {
   function sendEmail(event: any) {
     event.preventDefault();

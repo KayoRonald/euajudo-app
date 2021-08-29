@@ -13,13 +13,11 @@ import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { useHistory } from 'react-router-dom';
-import Input from '../../../components/Input/';
 import mapIcon from '../../../utils/';
 import api from '../../../api/';
 import * as ROUTES from '../../../constants/routes';
 import Button from '../ButtonSend/';
-import AlertPoint from '../../../components/AlertPoint';
-import FormControl from '../../../components/FormControl';
+import { Input, Alert, FormControl } from '../../../components';
 const ContactForm: React.FC = () => {
   const history = useHistory();
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
@@ -93,7 +91,7 @@ const ContactForm: React.FC = () => {
           position={[position.latitude, position.longitude]}
         />
       </MapContainer>
-      <AlertPoint />
+      <Alert />
       <SimpleGrid columns={[1, 1, 2]} spacing={2}>
         <FormControl id="nome" mt={1} name="Nome">
           <Input
