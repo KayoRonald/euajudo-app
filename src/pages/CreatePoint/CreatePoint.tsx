@@ -4,7 +4,7 @@ import {
   Flex, Box,
 } from '@chakra-ui/react';
 import ContactForm from './ContactForm/';
-import FormHeader from '../../components/FormHeader/';
+import { FormHeader } from '../../components/';
 import { Footer } from './styles/styles';
 const CreatePont: React.FC = () => {
   return (

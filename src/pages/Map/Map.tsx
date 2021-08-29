@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
-import { FiPlus, FiArrowRight } from 'react-icons/fi';
+import { FiPlus } from 'react-icons/fi';
 import { Map as MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import {
   Text
@@ -12,7 +12,7 @@ import mapIcon from '../../utils/';
 import * as ROUTES from '../../constants/routes';
 import { PageMap } from './styles';
 import api from '../../api/';
-import Modal from '../../components/Modal';
+import { Modal } from '../../components';
 
 type RegistionProps = {
   id: number;

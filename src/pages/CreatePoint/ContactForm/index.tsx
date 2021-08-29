@@ -13,13 +13,11 @@ import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { useHistory } from 'react-router-dom';
-import Input from '../../../components/Input/';
 import mapIcon from '../../../utils/';
 import api from '../../../api/';
 import * as ROUTES from '../../../constants/routes';
 import Button from '../ButtonSend/';
-import AlertPoint from '../../../components/AlertPoint';
-import FormControl from '../../../components/FormControl';
+import { Input, Alert, FormControl } from '../../../components';
 const ContactForm: React.FC = () => {
   const history = useHistory();
   const [position, setPosition] = React.useState({ latitude: 0, longitude: 0 });
@@ -57,14 +55,17 @@ const ContactForm: React.FC = () => {
       typePoint,
     };
     if (latitude === 0 && longitude === 0) {
-      swal("Calma lá", "Selecione um local no mapa :(", "error");
+      swal("Calma lá", "Selecione um local no mapa", "error");
     } else {
       try {
         setLoading(true);
         await api.post('/registionPoint/', data);
-        swal("Cadastro Realizado!", "Obrigado por contribuir!", "success");
+        swal(`Cadastro Realizado!`,
+          `O seu ponto ${Number(namePoint) >= 6 ? namePoint : namePoint.substring(1, namePoint.length)}`
+          + `..., foi cadastrado`, "success");
       } catch (error) {
-        swal("Ops!", "Ocorreu algum erro com nossa api :(", "error");
+        swal("Ops!", `${Number(namePoint) >= 6 ? namePoint : namePoint.substring(1, namePoint.length)}`
+          + `...`, "error");
       } finally {
         setLoading(false);
         setTimeout(() => {
@@ -93,7 +94,7 @@ const ContactForm: React.FC = () => {
           position={[position.latitude, position.longitude]}
         />
       </MapContainer>
-      <AlertPoint />
+      <Alert />
       <SimpleGrid columns={[1, 1, 2]} spacing={2}>
         <FormControl id="nome" mt={1} name="Nome">
           <Input

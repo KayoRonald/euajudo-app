@@ -1,10 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Container from '../../containers/Jumbotron/';
-import Hero from '../../containers/Hero/';
-import Accordion from '../../components/AccordionInfo/';
-import FooterContainer from '../../containers/Footer/';
-import Banner from '../../components/Banner/';
+import { Container, Hero, Footer } from '../../containers';
+import { Banner, Accordion } from '../../components';
 export default function Landing() {
   return (
     <React.Fragment key="key">
@@ -13,7 +10,7 @@ export default function Landing() {
       <Container />
       <Accordion />
       <Banner />
-      <FooterContainer />
+      <Footer />
     </React.Fragment>
   );
 }
