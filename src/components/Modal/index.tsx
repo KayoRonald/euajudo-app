@@ -53,7 +53,7 @@ const Modal: React.FC<ModalProps> = ({
             <Text marginLeft={2} isTruncated>
               {
                 responsibleName[0].toLocaleUpperCase()
-                + responsibleName.substring(1, responsibleName.length)
+                + responsibleName.substring(1, responsibleName.length).toLowerCase()
               }
             </Text>
           </ModalFooter>
