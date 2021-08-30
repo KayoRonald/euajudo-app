@@ -63,7 +63,7 @@ const Banner: React.FC = () => {
             rounded="md"
             px="8"
             py="3"
-            href={ROUTES.APPGITHUB}
+            href={ROUTES.GITHUB}
             color="white"
             fontSize="lg"
             fontWeight="semibold"
