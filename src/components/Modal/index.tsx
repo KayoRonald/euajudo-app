@@ -4,7 +4,7 @@ import React from 'react';
 import {
   Text, Modal as ChakraModal, ModalOverlay,
   ModalContent, ModalHeader, ModalFooter, ModalBody,
-  ModalCloseButton, useDisclosure, Divider, Button, Box
+  ModalCloseButton, useDisclosure, Divider, Button, Box,
 } from '@chakra-ui/react';
 import { FiArrowRight, FiMessageSquare } from 'react-icons/fi';
 
@@ -16,7 +16,7 @@ type ModalProps = {
   typePoint: string;
 };
 const Modal: React.FC<ModalProps> = ({
-  namePoint, about, whatsapp, responsibleName, typePoint
+  namePoint, about, whatsapp, responsibleName, typePoint,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
