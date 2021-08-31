@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { FiPlus } from 'react-icons/fi';
 import { Map as MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import {
-  Text
-} from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import Helmet from 'react-helmet';
 
 import mapIcon from '../../utils/';

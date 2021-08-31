@@ -6,9 +6,7 @@ import {
   AiOutlineTeam,
 } from 'react-icons/ai';
 
-import {
-  Box, SimpleGrid, Select
-} from '@chakra-ui/react';
+import { Box, SimpleGrid, Select } from '@chakra-ui/react';
 import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet';
