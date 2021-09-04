@@ -6,7 +6,6 @@ import {
 
 type LayoutProps = {
   children?: React.ReactNode;
-  resPropos?: React.ReactNode;
 }
 
 export default function Footer({ children, ...resPropos }: LayoutProps) {
