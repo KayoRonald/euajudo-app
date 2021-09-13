@@ -1,14 +1,5 @@
-# image: public.ecr.aws/g7f0f4s4/workspace-full:latest
-  # file: .gitpod.Dockerfile
-
-# List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
-image:
-  file: .gitpod.Dockerfile
-
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - command: sudo docker-up
-  - init: wget https://github.com/jeromewu/docker-workspace/raw/master/vim.zip -O /tmp/vim.zip &> /dev/null && unzip /tmp/vim.zip -d /home/gitpod &> /dev/null
   - init: yarn install # runs during prebuild
     command: yarn start
 
