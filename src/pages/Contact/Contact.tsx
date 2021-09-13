@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
       >
         <Box
           as="form"
-          onSubmit={sendEmail}
+          onSubmit={() => sendEmail}
           backgroundColor="gray.700"
           px={4}
           width="94%"

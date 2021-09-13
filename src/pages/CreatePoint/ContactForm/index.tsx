@@ -74,14 +74,14 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <Box my={8} textAlign="left" onSubmit={handleSubmit} as="form">
+    <Box my={8} textAlign="left" onSubmit={() => handleSubmit} as="form">
       <MapContainer
         center={[userPosition.latitude, userPosition.longitude]}
         zoom={15.7}
         style={
           { width: '100%', height: 280, borderRadius: 7 }
         }
-        onclick={handleMapClick}
+        onclick={() => handleMapClick}
       >
         <TileLayer
           url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2F5b2t5bGVyIiwiYSI6ImNrcG55N3RnaDBrdnkydm13YTIwdDQ2MXAifQ.mPGFip4w4KhoZSqmUqoY2w`}
