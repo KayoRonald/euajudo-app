@@ -3,8 +3,7 @@ import Helmet from 'react-helmet';
 import Lottie from 'react-lottie';
 import { useHistory } from 'react-router-dom';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { Stack, Button, Center, Text } from '@chakra-ui/react';
-import { Container } from './style';
+import { VStack, Button, Heading, Text, Container } from '@chakra-ui/react';
 import animationData2 from '../../json/animation/62541-404-error-robot.json';
 import FooterContainer from '../../containers/Footer/';
 
@@ -22,24 +21,24 @@ const PageNotFound: React.FC<LocationProps> = ({ location, pathname }) => {
   const { goBack } = useHistory();
   return (
     <React.Fragment key="key">
+      <Helmet>
+        <title>Eu Ajudo | Ops {location.pathname}</title>
+      </Helmet>
+      <VStack justify="center" spacing="4" as="section" mt={["20", null, "30"]} textAlign="center">
+        <Heading>404 | Page Not Found</Heading>
+        <Text fontSize={{ md: "xl" }}>
+          A página {location.pathname} não existe ou foi removida😢
+        </Text>
+          <Button as="a" aria-label="Voltar" onClick={goBack} leftIcon={<AiOutlineArrowRight />} colorScheme="teal" size="lg">
+            Voltar
+          </Button>
+      </VStack>
       <Container>
-        <Helmet>
-          <title>Eu Ajudo | Ops {location.pathname}</title>
-        </Helmet>
         <Lottie
           options={defaultOptions}
           height={400}
           width={400}
         />
-        <Center>
-          <Text textAlign="center">A página que você está procurando não existe ou foi removida</Text>
-        </Center>
-
-        <Stack direction="row" spacing={4} align="center" mt={3}>
-            <Button as="a" onClick={goBack} cursor="pointer" colorScheme="teal" variant="solid" color="#000" leftIcon={<AiOutlineArrowRight />}>
-              Voltar
-            </Button>
-        </Stack>
       </Container>
       <FooterContainer />
     </React.Fragment>
