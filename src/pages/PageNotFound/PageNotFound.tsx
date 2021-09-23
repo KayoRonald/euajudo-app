@@ -1,9 +1,10 @@
+/* eslint-disable */
 import React from 'react';
 import Helmet from 'react-helmet';
 import Lottie from 'react-lottie';
 import { useHistory } from 'react-router-dom';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { VStack, Button, Heading, Text, Center, Image, Box, Flex } from '@chakra-ui/react'
+import { VStack, Button, Heading, Text, Center, Image, Box, Flex } from '@chakra-ui/react';
 import FooterContainer from '../../containers/Footer/';
 
 type LocationProps = {
@@ -42,7 +43,8 @@ const PageNotFound: React.FC<LocationProps> = ({ location, pathname }) => {
 						<VStack justify="center" spacing="4" textAlign="center" as="article">
 							<Heading>404 | Page Not Found</Heading>
 							<Text fontSize={{ md: "xl" }}>
-								Ops! Parece que página {location.pathname}, que você seguiu um link incorreto. Se você acha que isso é um problema para nós, diga-nos.
+								Ops! Parece que página {location.pathname}, que você seguiu um link incorreto. 
+                Se você acha que isso é um problema para nós, diga-nos.
 							</Text>
 								<Button
 									as="a"
