@@ -21,7 +21,6 @@ const PageNotFound: React.FC<LocationProps> = ({ location, pathname }) => {
       </Helmet>
       <Flex flexDirection="column" minHeight="100vh" width="full" align="center" justifyContent="center">
 				<Box
-					backgroundColor="gray.700"
 					px={4}
 					width="94%"
 					maxWidth="500px"
