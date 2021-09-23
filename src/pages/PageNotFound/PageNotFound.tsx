@@ -49,7 +49,6 @@ const PageNotFound: React.FC<LocationProps> = ({ location, pathname }) => {
 								<Button
 									as="a"
 									aria-label="Back to Home"
-									leftIcon={<FaHome />}
 									colorScheme="teal"
 									size="lg"
                   onClick={goBack} 
