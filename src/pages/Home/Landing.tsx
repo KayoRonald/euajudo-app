@@ -55,7 +55,7 @@ export default function Landing() {
                 mt="6"
               >
                 Encontrar ou tornar visíveis os pontos de ajudas nunca foi tão fácil.
-                Comece a <Text fontWeight="extrabold" as="span" color="purple.500">Encontrar Adicionar</Text> um novo ponto de vacinação ou de doações.
+                Comece a <Text fontWeight="extrabold" as="span" color="purple.500">Encontrar ou Adicionar</Text> um novo ponto de vacinação ou de doações.
               </Text>
               <Stack
                 mt="10"
