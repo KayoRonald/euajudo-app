@@ -42,9 +42,6 @@ export default function FooterContainer() {
         </Footer.Column>
 
         <Footer.Column>
-          <Footer.Texto>
-            <a href={ROUTES.TEAM}>Equipe</a>
-          </Footer.Texto>
           <Footer.Texto>Privacidade</Footer.Texto>
           <Footer.Texto>
             <ChakraLink href="https://fast.com/pt/" isExternal>

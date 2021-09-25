@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React from "react";
 import {
   Box, Text, Heading,
   Stack, SimpleGrid, Avatar,
 } from '@chakra-ui/react';
 import { AiOutlineTeam } from 'react-icons/ai';
-import contributors from '../../../json/contributors/contributors.json';
+import { ContributorsData } from '../../../data/contributors';
 
 const Contributors: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const Contributors: React.FC = () => {
         <AiOutlineTeam />
       </Heading>
       <SimpleGrid columns={[1, 1, 2]} spacing="40px" pt="3">
-        {contributors.map((member) => (
+        {ContributorsData.map((member) => (
           <Box
             borderLeftWidth="4px"
             borderLeftColor="purple.500"
