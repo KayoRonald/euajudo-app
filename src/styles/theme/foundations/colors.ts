@@ -8,6 +8,9 @@ const colors = {
   purple: {
     500: '#8257e5',
   },
+  black: {
+    400: '#0e0f13',
+  },
   primary: {
     100: '#E5FCF1',
     200: '#27EF96',
