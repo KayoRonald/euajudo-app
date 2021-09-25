@@ -8,6 +8,7 @@ import { DiGithubBadge } from 'react-icons/di';
 import { Container, Footer } from '../../containers';
 import { Banner, Accordion } from '../../components';
 import * as ROUTES from '../../constants/routes';
+import { Team } from '../../components/Team/Team';
 export default function Landing() {
   return (
     <React.Fragment key="key">
@@ -54,7 +55,7 @@ export default function Landing() {
                 mt="6"
               >
                 Encontrar ou tornar visíveis os pontos de ajudas nunca foi tão fácil.
-                Comece a Encontrar Adicionar um novo ponto de vacinação ou de doações.
+                Comece a <Text fontWeight="extrabold" as="span" color="purple.500">Encontrar Adicionar</Text> um novo ponto de vacinação ou de doações.
               </Text>
               <Stack
                 mt="10"
@@ -102,8 +103,11 @@ export default function Landing() {
         </Box>
       </Box>
       <Container />
-      <Banner />
+      <Team />
       <Accordion />
+      <Box mt={4}>
+        <Banner />
+      </Box>
       <Footer />
     </React.Fragment>
   );

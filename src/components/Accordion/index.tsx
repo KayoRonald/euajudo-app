@@ -7,23 +7,17 @@ import {
   AccordionIcon,
   Box, Container, Heading, Center,
 } from '@chakra-ui/react';
-import faqDate from '../../json/faq/faq.json';
+import { FaqData } from '../../data/faq';
 import { Circle, StrongText, SpanText } from './style';
 
-type AccordionProps = {
-  id?: number;
-  header?: string;
-  body?: string;
-}
-
-const Accordion: React.FC<AccordionProps> = ({ id, header, body }) => {
+const Accordion: React.FC = () => {
   return (
     <Container maxWidth="74ch" mt="22px">
       <Center marginBottom={5}>
         <Heading as="h2">Perguntas frequentes</Heading>
       </Center>
       <ChakraAccordion allowToggle>
-        {faqDate.map((faq) => (
+        {FaqData.map((faq) => (
           <AccordionItem key={faq.id} borderTopWidth={0} borderBottomWidth={0} marginBottom="3px">
             <h2>
               <AccordionButton

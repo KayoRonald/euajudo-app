@@ -1,4 +1,5 @@
-[
+/* eslint-disable */
+export const ContributorsData =[
   {
     "id": 11,
     "name": "Eduardo Pinheiro",

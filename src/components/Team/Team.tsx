@@ -6,27 +6,14 @@ import {
 import { AiOutlineTeam } from 'react-icons/ai';
 import Helmet from 'react-helmet';
 import Contributors from './Contributors/';
-import teamDate from '../../json/team/team.json';
-import FooterContainer from '../../containers/Footer/';
-import * as ROUTES from '../../constants/routes';
-import NavBar from './NavBar/';
+import { TeamDate } from '../../data/team';
 
-type TeamProps = {
-  id: number;
-  name: string;
-  avatar: string;
-  cargo: string;
-  background: string;
-  collaboration?: string;
-}
-
-const Team: React.FC<TeamProps> = () => {
+export const Team: React.FC = () => {
   return (
 
     <React.Fragment key="key">
       <Helmet title="Eu Ajudo | Equipe" />
       <Box mb="60px" as="section">
-        <NavBar />
         <Container py="80px" textAlign="center">
           <chakra.h1
             bgGradient="linear(to-l, #7928CA,#FF0080)"
@@ -35,8 +22,6 @@ const Team: React.FC<TeamProps> = () => {
             mb="5"
             fontWeight="bold"
             fontSize="2rem"
-            as="a"
-            href={ROUTES.HOME}
           >
             Eu Ajudo
           </chakra.h1>
@@ -50,12 +35,15 @@ const Team: React.FC<TeamProps> = () => {
       <Box mb="60px" as="section">
         <Container maxWidth="107ch">
           <Stack spacing={8}>
-            <Heading size="lg" display="inline-flex">
+            <Heading
+              size="lg"
+              display="inline-flex"
+            >
               Equipe Central
               <AiOutlineTeam />
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} spacing="40px" pt="3">
-              {teamDate.map((member) => (
+              {TeamDate.map((member) => (
                 <Box
                   borderLeftWidth="4px"
                   borderLeftColor="purple.500"
@@ -103,9 +91,6 @@ const Team: React.FC<TeamProps> = () => {
           </Stack>
         </Container>
       </Box>
-      <FooterContainer />
     </React.Fragment>
   );
 };
-
-export default Team;
