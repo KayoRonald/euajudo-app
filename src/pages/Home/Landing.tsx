@@ -102,8 +102,8 @@ export default function Landing() {
         </Box>
       </Box>
       <Container />
-      <Accordion />
       <Banner />
+      <Accordion />
       <Footer />
     </React.Fragment>
   );
