@@ -4,7 +4,6 @@ import {
   Stack, SimpleGrid, Avatar,
 } from '@chakra-ui/react';
 import { AiOutlineTeam } from 'react-icons/ai';
-import Helmet from 'react-helmet';
 import Contributors from './Contributors/';
 import { TeamDate } from '../../data/team';
 
@@ -12,7 +11,6 @@ export const Team: React.FC = () => {
   return (
 
     <React.Fragment key="key">
-      <Helmet title="Eu Ajudo | Equipe" />
       <Box mb="60px" as="section">
         <Container py="80px" textAlign="center">
           <chakra.h1
