@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { FiPlus } from 'react-icons/fi';
 import { Map as MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Helmet from 'react-helmet';
 
 import mapIcon from '../../utils/';
 import * as ROUTES from '../../constants/routes';
-import { PageMap } from './styles';
 import api from '../../api/';
 import { Modal } from '../../components';
 
@@ -48,7 +47,7 @@ const MapHelp: React.FC = () => {
   }, []);
 
   return (
-    <PageMap>
+    <Box d="flex" w="100vw" h="100vh" zIndex={10} position="relative">
       <Helmet>
         <title>Eu Ajudo | Pontos de vacinção</title>
       </Helmet>
@@ -85,7 +84,7 @@ const MapHelp: React.FC = () => {
       <Link to={ROUTES.CREATEPOINT} className="create-vaccination-point">
         <FiPlus size={32} color="#FFF" />
       </Link>
-    </PageMap>
+    </Box>
   );
 };
 
