@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import Helmet from 'react-helmet';
 import {
@@ -13,7 +12,10 @@ import { Team } from '../../components/Team/Team';
 export default function Landing() {
   return (
     <React.Fragment key="key">
-      <Helmet title="Eu Ajudo | Venha ajudar sua comunidade!" />
+      <Helmet>
+        <title>Eu Ajudo | Venha ajudar sua comunidade!</title>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20784564.js"></script>
+      </Helmet>
       <Box>
         <Box as="section" pt="6rem" pb={{ base: "0", md: "5rem" }}>
           <ChakraContainer maxW="107ch">
@@ -110,7 +112,6 @@ export default function Landing() {
         <Banner />
       </Box>
       <Footer />
-      <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20784564.js"></script>
     </React.Fragment>
   );
 }

@@ -52,7 +52,6 @@
 		"object-curly-newline": "off",
 		"@typescript-eslint/no-unused-vars": "off",
 		"@typescript-eslint/no-explicit-any": "off",
-		"no-tabs": "off",
 		"import/prefer-default-export": "off",
 		"quotes": "off",
 		"react/jsx-curly-brace-presence": "off",
@@ -61,6 +60,7 @@
 		"react/no-children-prop": "off",
 		"react/require-default-props": "off",
 		"padded-blocks": "off",
-		"no-shadow": "off"
+		"no-shadow": "off",
+		"react/self-closing-comp": "off"
 	}
 }
