@@ -8,3 +8,4 @@ export { default as FormHeader } from './FormHeader';
 export { default as FormControl } from './FormControl';
 export { default as Alert } from './AlertPoint';
 export { default as Spinner } from './Spinner';
+export { default as PageTransition } from './Transition';
