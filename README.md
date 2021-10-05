@@ -11,7 +11,9 @@
 
 # 📖 **Sobre**
 O projeto **'Eu ajudo'** é uma aplicação Web realizada para que os usuários colabore com sua comunidade cadstrando os pontos de vacina em sua cidade no site. Assim que outras pessoas possam encontrar.
-
+<p align="center">
+    <img src="screen/euajudo.png" alt="Eu Ajudo" width="450"/>
+</p>
 Temos como propósito que apropria comunidade se ajude entre si, assim colaborando na sociedade. Então venha ajudar sua comunidade!💜
 
 Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **Instituto Federal de Educação Ciência e Tecnologia da Paraíba Campus Picuí (IFPB)**. 🎓
@@ -26,12 +28,12 @@ Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **
 <table align="center">
   <tr>
     <td align="center">
-      <a href="https://euajudo-app.vercel.app/">
-        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/7308958?v=4" width="100px;" alt="Eu Ajudo"/>
+      <a href="https://github.com/romulomenezesjr/">
+        <img style="border-radius: 13px;" src="https://avatars.githubusercontent.com/u/7308958?v=4" width="100px;" alt="Eu Ajudo"/>
         <br />
         <sub><b>Rômulo Costa</b>
         </sub></a><br />
-      <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">
+      <a href="https://github.com/romulomenezesjr/" title="Eu Ajudo">
 Orientador</a>
     </td>
        <td align="center">
@@ -43,12 +45,12 @@ Orientador</a>
       <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">Front-end</a>
     </td>
      <td align="center">
-      <a href="https://euajudo-app.vercel.app/">
-        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/62349504?v=4" width="100px;" alt="Eu Ajudo"/>
+      <a href="https://github.com/GLAUBEBE">
+        <img style="border-radius: 13px;" src="https://avatars.githubusercontent.com/u/62349504?v=4" width="100px;" alt="Eu Ajudo"/>
         <br />
         <sub><b>Gluaber </b>
         </sub></a><br />
-      <a href="https://euajudo-app.vercel.app/" title="Eu Ajudo">Back-end</a>
+      <a href="https://github.com/GLAUBEBE" title="Eu Ajudo">Back-end</a>
     </td>
   </tr>
 </table>
@@ -58,15 +60,6 @@ Orientador</a>
 <br/>
 <hr/>
 
-# Aviso
-Quando for executar o código, possivelmente o tsconfig vai ser gerado novamente. Assim, ele vai sobrescrever uma linha, como o exemplo demostra:
-Código atual
-> "jsx": "react"
-
-Código depois da primeira execução:
-> "jsx": "react-jsx"
-
-O código que foi acabado de ser mostrado vai causar um erro somente visual em seu respectivo editor, então devemos colocar somente o nome "react", para retirar o erro visual. Não vai compromenter a execução de seu projeto.
 ## 🤔 **Como contribuir?**
 
 - Faça um `fork` desse repositório;
