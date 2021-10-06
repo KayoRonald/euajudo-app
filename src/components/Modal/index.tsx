@@ -1,12 +1,14 @@
 /* eslint no-trailing-spaces: "off" */
-
 import React from 'react';
 import {
   Text, Modal as ChakraModal, ModalOverlay,
   ModalContent, ModalHeader, ModalFooter, ModalBody,
-  ModalCloseButton, useDisclosure, Divider, Button, Box,
+  ModalCloseButton, useDisclosure, Divider, Button, PopoverContent,
+  Tabs, Tab, TabList, TabPanels, TabPanel, LinkBox, PopoverCloseButton,
+  LinkOverlay, Popover, PopoverTrigger, PopoverArrow, PopoverHeader,
+  PopoverBody, chakra,
 } from '@chakra-ui/react';
-import { FiArrowRight, FiMessageSquare } from 'react-icons/fi';
+import { FiArrowRight, FiMessageSquare, FiAlertOctagon } from 'react-icons/fi';
 
 type ModalProps = {
   namePoint: string;
@@ -14,9 +16,12 @@ type ModalProps = {
   whatsapp: string;
   responsibleName: string;
   typePoint: string;
+  latitudeCoords: any;
+  longitudeCoords: any;
 };
 const Modal: React.FC<ModalProps> = ({
   namePoint, about, whatsapp, responsibleName, typePoint,
+  latitudeCoords, longitudeCoords,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -27,14 +32,34 @@ const Modal: React.FC<ModalProps> = ({
       <ChakraModal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{namePoint}</ModalHeader>
+          <ModalHeader isTruncated>
+            <AlertInfo typePoint={typePoint}><FiAlertOctagon /></AlertInfo>
+            {namePoint}
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Sobre:
-            <Box px={4} color="white">
-              <Text>{about}</Text>
-            </Box>
-            <Text>È um Ponto de vacinação? {typePoint}</Text>
+            <Tabs variant="enclosed">
+              <TabList>
+                <Tab>Informações</Tab>
+                <Tab>Ver rotas</Tab>
+              </TabList>
+              <TabPanels>
+                <TabPanel>
+                  <Text>{about}</Text>
+                </TabPanel>
+                <TabPanel>
+                  <LinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
+                    <Text my="2">
+                      <LinkOverlay
+                        href={`https://www.google.com.br/maps/dir/?api=1&destination=${latitudeCoords},${longitudeCoords}`}
+                      >
+                        Ver rotas no Google Maps
+                      </LinkOverlay>
+                    </Text>
+                  </LinkBox>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </ModalBody>
           <ModalFooter justifyContent="space-around">
             <Button
@@ -63,3 +88,23 @@ const Modal: React.FC<ModalProps> = ({
   );
 };
 export default Modal;
+
+const AlertInfo = ({ children, typePoint }: any) => {
+  return (
+    <Popover>
+      <PopoverTrigger>
+        <Button>{children}</Button>
+      </PopoverTrigger>
+      <PopoverContent>
+        <PopoverArrow />
+        <PopoverCloseButton />
+        <PopoverHeader>É um ponto de vacinação?</PopoverHeader>
+        <PopoverBody>
+          <chakra.p>
+            {typePoint}
+          </chakra.p>
+        </PopoverBody>
+      </PopoverContent>
+    </Popover>
+  );
+};
