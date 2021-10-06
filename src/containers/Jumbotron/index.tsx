@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron } from '../../components';
+import { Jumbotron, PageTransition } from '../../components';
 import { JumboData } from '../../data/jumbo/';
 
 const Container: React.FC = () => {
@@ -12,7 +12,9 @@ const Container: React.FC = () => {
             <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
           </Jumbotron.Pane>
           <Jumbotron.Pane>
-            <Jumbotron.Image id={`id${item.id}`} src={item.image} alt={item.alt} />
+            <PageTransition>
+              <Jumbotron.Image id={`id${item.id}`} src={item.image} alt={item.alt} />
+            </PageTransition>
           </Jumbotron.Pane>
         </Jumbotron>
       ))}

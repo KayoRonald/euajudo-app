@@ -75,6 +75,8 @@ const MapHelp: React.FC = () => {
                   whatsapp={registion.whatsapp}
                   responsibleName={registion.responsibleName}
                   typePoint={registion.typePoint}
+                  latitudeCoords={Number(registion.latitude)}
+                  longitudeCoords={Number(registion.longitude)}
                 />
               </Popup>
             </Marker>

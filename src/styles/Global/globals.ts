@@ -89,4 +89,15 @@ body::-webkit-scrollbar-thumb:hover {
 .leaflet-popup-content p{
   margin: 2px;
 }
+.footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.orphanage-details .orphanage-details-content .map-container footer a {
+  line-height: 24px;
+  color: #0089a5;
+  text-decoration: none;
+}
+
 `;
