@@ -7,6 +7,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Helmet from 'react-helmet';
 
 import mapIcon from '../../utils/';
+import mapIconvaccination from '../../utils/point';
 import * as ROUTES from '../../constants/routes';
 import api from '../../api/';
 import { Modal } from '../../components';
@@ -63,7 +64,7 @@ const MapHelp: React.FC = () => {
         {registionPoint?.map((registion) => {
           return (
             <Marker
-              icon={mapIcon}
+              icon={registion.typePoint === "sim" ? mapIconvaccination : mapIcon}
               position={[registion.latitude, registion.longitude]}
               key={registion.id}
             >

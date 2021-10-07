@@ -3,12 +3,12 @@ import React from 'react';
 import {
   Text, Modal as ChakraModal, ModalOverlay,
   ModalContent, ModalHeader, ModalFooter, ModalBody,
-  ModalCloseButton, useDisclosure, Divider, Button, PopoverContent,
-  Tabs, Tab, TabList, TabPanels, TabPanel, LinkBox, PopoverCloseButton,
-  LinkOverlay, Popover, PopoverTrigger, PopoverArrow, PopoverHeader,
-  PopoverBody, chakra,
+  ModalCloseButton, useDisclosure, Divider, Button,
+  Tabs, Tab, TabList, TabPanels, TabPanel, LinkBox,
+  LinkOverlay, Box, Alert, AlertIcon,
 } from '@chakra-ui/react';
-import { FiArrowRight, FiMessageSquare, FiAlertOctagon } from 'react-icons/fi';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { FiArrowRight, FiMessageSquare } from 'react-icons/fi';
 
 type ModalProps = {
   namePoint: string;
@@ -33,7 +33,6 @@ const Modal: React.FC<ModalProps> = ({
         <ModalOverlay />
         <ModalContent>
           <ModalHeader isTruncated>
-            <AlertInfo typePoint={typePoint}><FiAlertOctagon /></AlertInfo>
             {namePoint}
           </ModalHeader>
           <ModalCloseButton />
@@ -45,15 +44,22 @@ const Modal: React.FC<ModalProps> = ({
               </TabList>
               <TabPanels>
                 <TabPanel>
-                  <Text>{about}</Text>
+                  <Text noOfLines={3}>{about}</Text>
+                  <Box mt={2}>
+                    <Alert status="success">
+                      <AlertIcon />
+                      {typePoint === 'sim' ? 'Ponto de vacinação' : 'Ponto de doação'}
+                    </Alert>
+                  </Box>
                 </TabPanel>
                 <TabPanel>
                   <LinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md">
                     <Text my="2">
                       <LinkOverlay
+                        target="_blank"
                         href={`https://www.google.com.br/maps/dir/?api=1&destination=${latitudeCoords},${longitudeCoords}`}
                       >
-                        Ver rotas no Google Maps
+                        Ver rotas no Google Maps <ExternalLinkIcon mx="2px" />
                       </LinkOverlay>
                     </Text>
                   </LinkBox>
@@ -66,7 +72,7 @@ const Modal: React.FC<ModalProps> = ({
               as="a" href={`https://api.whatsapp.com/send?phone=${whatsapp}`} target="_blank"
               rightIcon={<FiMessageSquare />} colorScheme="blue" variant="outline"
             >
-              whatsapp
+              Whatsapp
             </Button>
             <Button variant="ghost" mr={3} onClick={onClose}>
               Cancel
@@ -88,23 +94,3 @@ const Modal: React.FC<ModalProps> = ({
   );
 };
 export default Modal;
-
-const AlertInfo = ({ children, typePoint }: any) => {
-  return (
-    <Popover>
-      <PopoverTrigger>
-        <Button>{children}</Button>
-      </PopoverTrigger>
-      <PopoverContent>
-        <PopoverArrow />
-        <PopoverCloseButton />
-        <PopoverHeader>É um ponto de vacinação?</PopoverHeader>
-        <PopoverBody>
-          <chakra.p>
-            {typePoint}
-          </chakra.p>
-        </PopoverBody>
-      </PopoverContent>
-    </Popover>
-  );
-};
