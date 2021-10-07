@@ -6,13 +6,13 @@ import {
   AiFillPhone,
   AiOutlineTeam,
 } from 'react-icons/ai';
-
 import { Box, SimpleGrid, Select } from '@chakra-ui/react';
 import { LeafletMouseEvent } from 'leaflet';
 import swal from 'sweetalert';
 import { Map as MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { useHistory } from 'react-router-dom';
 import mapIcon from '../../../utils/';
+import mapIconvaccination from '../../../utils/point';
 import api from '../../../api/';
 import * as ROUTES from '../../../constants/routes';
 import Button from '../ButtonSend/';
@@ -87,7 +87,7 @@ const ContactForm: React.FC = () => {
           url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2F5b2t5bGVyIiwiYSI6ImNrcG55N3RnaDBrdnkydm13YTIwdDQ2MXAifQ.mPGFip4w4KhoZSqmUqoY2w`}
         />
         <Marker
-          icon={mapIcon}
+          icon={typePoint === 'sim' ? mapIconvaccination : mapIcon}
           interactive={false}
           position={[position.latitude, position.longitude]}
         />
