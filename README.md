@@ -107,12 +107,6 @@ yarn
 npm install
 ```
 
-# Docker
-docker build -t euajudo:dev .
-
-
-docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm euajudo:dev
-
 **4. Como rodar o projeto**
 
 <!--ts-->
@@ -141,7 +135,14 @@ npm start
 ```
 Ao inicia o projeto abrirar a rota [localhost:3000](http://localhost:3000/)
 
-<br/>
+<hr/>
+
+## Docker
+docker build -t euajudo:dev .
+
+
+docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm euajudo:dev
+
 <hr/>
 
 ## 📷 **Imagens utilizadas e Ícones.**
