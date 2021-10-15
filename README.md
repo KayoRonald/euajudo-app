@@ -64,7 +64,7 @@ Orientador</a>
 
 - Faça push para a sua branch: `git push origin minha-feature`.
 
-## **💻 Tecnologias e Dependência**
+### **💻 Tecnologias e Dependência**
 
 Esse projeto foi feito utilizando as seguintes tecnologias:
 
@@ -82,34 +82,8 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 <br/>
 <hr/>
 
-**1. Faça um clone do repositório:**
-```bash
- git clone https://github.com/KayoRonald/euajudo-app.git
-```
+### 🚀 **Como rodar o projeto?**
 
-**2. Executando a Aplicação:**
-
-No diretório do projeto, você pode executar:
-```bash
-  cd euajudo-app 
-```
-
-**3. Como instalar as dependências**
-
-Caso você queira, podera ser usado o yarn ou npm. 
-
-```bash
-yarn 
-```
-<p align="center">ou</p>
-
-```bash
-npm install
-```
-
-**4. Como rodar o projeto**
-
-<!--ts-->
  **Pré-requisito**
  
 <blockquote>
@@ -122,14 +96,43 @@ npm install
   
 </blockquote>
 
-<br/>
+**1. Faça um clone do repositório:**
+
+Primeiro: é necessário fazer o clone do repositorio após ter feito o fork do projeto para você poder pegar a URL do proejeto como é mostrado no 
+Exemplo 1. E ao final colocar o .git, sendo representando no Exemplo 2.
+Exemplo 1:
+```bash 
+  https://github.com/KayoRonald/euajudo-app
+```
+Exemplo 2:
+```bash
+ git clone https://github.com/KayoRonald/euajudo-app.git
+```
+
+**2. Executando a Aplicação:**
+
+Abrindo o terminal, você pode executar o seguinte comando para entrar no diretório do projeto:
+
+```bash
+  cd euajudo-app 
+```
+
+**3. Como instalar as dependências**
+
+Caso você queira, podera ser usado o yarn ou npm. 
+
+```bash
+yarn 
+```
+```bash
+npm install
+```
+
+**4. Como rodar o projeto**
 
 ```bash
 yarn start
 ```
-
-<p align="center">ou</p>
-
 ```bash
 npm start
 ```
@@ -137,15 +140,14 @@ Ao inicia o projeto abrirar a rota [localhost:3000](http://localhost:3000/)
 
 <hr/>
 
-## Docker
+### Docker
 docker build -t euajudo:dev .
-
 
 docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm euajudo:dev
 
 <hr/>
 
-## 📷 **Imagens utilizadas e Ícones.**
+### 📷 **Imagens utilizadas e Ícones.**
 <b>[Storyset](https://storyset.com/)</b>
 
 <b>[React-icons](https://react-icons.github.io/react-icons/)</b>
@@ -162,5 +164,5 @@ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm euajudo:dev
     <b>Realizado como trablho no <a href="https://www.ifpb.edu.br/picui">IFPB Campus Picuí. 💜</a></b>
 </h4>
 
-## 📝 **Licença**
+### 📝 **Licença**
 Esse projeto está sobre a licença MIT. Veja o arquivo **[LICENSE](LICENSE)** para mais detalhes.
