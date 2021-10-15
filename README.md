@@ -14,15 +14,9 @@ O projeto **'Eu ajudo'** é uma aplicação Web realizada para que os usuários 
 <p align="center">
     <img src="screen/euajudo.png" alt="Eu Ajudo" width="450"/>
 </p>
-Temos como propósito que apropria comunidade se ajude entre si, assim colaborando na sociedade. Então venha ajudar sua comunidade!💜
+Encontrar ou tornar visíveis os pontos de ajudas nunca foi tão fácil. Comece a Encontrar ou Adicionar um novo ponto de vacinação ou de doações. Temos como propósito que apropria comunidade se ajude entre si, assim colaborando na sociedade. Então venha ajudar sua comunidade!💜
 
 Realizado através do projeto do `Trabalho de conclusão de curso (TCC)` pelo **Instituto Federal de Educação Ciência e Tecnologia da Paraíba Campus Picuí (IFPB)**. 🎓
-
-## **About**
-<p>
-  App criado para intermediar pedidos durante isolamento social. 
-  O projeto 'Eu ajudo' é uma aplicação Web realizada para que os usuários colabore com sua comunidade.
-</p>
 
 <h2>🎓 <strong>Membros</strong></h2>
 <table align="center">
@@ -86,6 +80,7 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 >
 > - **[Docker]()**
 <br/>
+<hr/>
 
 **1. Faça um clone do repositório:**
 ```bash
@@ -147,23 +142,24 @@ npm start
 Ao inicia o projeto abrirar a rota [localhost:3000](http://localhost:3000/)
 
 <br/>
+<hr/>
 
 ## 📷 **Imagens utilizadas e Ícones.**
 <b>[Storyset](https://storyset.com/)</b>
 
 <b>[React-icons](https://react-icons.github.io/react-icons/)</b>
 
-<br/>
+<hr/>
 
-## 📝 **Licença**
-Esse projeto está sobre a licença MIT. Veja o arquivo **[LICENSE](LICENSE)** para mais detalhes.
-
-<br/>
-
-<h4 align="center">
+<p align="center">
+  <img src="https://www.alura.com.br/assets/api/cursos/512/react-js.png" width="150" title="React">
+  <img src="https://www.alura.com.br/assets/api/cursos/512/typescript-evoluindo-javascript.png" width="150" alt="TypeScript" title="TypeScript">
+  <img src="https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/505/265/square_480/chakra-lv1.png" width="150" alt="chakra" title="chakra"
+</p>
+  
+ <h4 align="center">
     <b>Realizado como trablho no <a href="https://www.ifpb.edu.br/picui">IFPB Campus Picuí. 💜</a></b>
 </h4>
 
-<p align="center">
-    <img src="https://miro.medium.com/max/1200/1*A1bEPfQeGGKp98z1cdctVA.png" alt="Eu Ajudo" width="450"/>
-</p>
+## 📝 **Licença**
+Esse projeto está sobre a licença MIT. Veja o arquivo **[LICENSE](LICENSE)** para mais detalhes.
