@@ -15,6 +15,7 @@ export default function Landing() {
       <Helmet>
         <title>Eu Ajudo | Venha ajudar sua comunidade!</title>
         <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20784564.js"></script>
+        <script id="CookieDeclaration" src="https://consent.cookiebot.com/1339155f-16aa-439d-8c1e-6b05db1af079/cd.js" type="text/javascript" async></script>
       </Helmet>
       <Box>
         <PageTransition>
